@@ -29,7 +29,7 @@
 27.  T. Yigitcanlar and S. H. Lee, "Korean ubiquitous-eco-city: A smart-sustainable urban form or a branding hoax?," *Technological Forecasting and Social Change*, vol. 89, pp. 100–114, 2014, doi: 10.1016/j.techfore.2013.08.034.
 28.  M. Forzati and C. Mattsson, "Twenty years of open fibre network in Stockholm: A socio-economic study," in *Proc. 15th International Conference on Transparent Optical Networks (ICTON)*, 2013, doi: 10.1109/ICTON.2013.6602829.
 29.  N. Czernich, O. Falck, T. Kretschmer, and L. Woessmann, "Broadband infrastructure and economic growth," *The Economic Journal*, vol. 121, no. 552, pp. 505–532, 2011, doi: 10.1111/j.1468-0297.2011.02420.x.
-30.  Federal Communications Commission, *Broadband Deployment Advisory Committee Overview*, FCC, 2017. [https://www.fcc.gov/news-events/events/2017/11/broadband-deployment-advisory-committee-meeting](https://www.fcc.gov/news-events/events/2017/11/broadband-deployment-advisory-committee-meeting)
+30.  J. M. Bauer, "Regulation, public policy, and investment in communications infrastructure," *Telecommunications Policy*, vol. 34, no. 1–2, pp. 65–79, 2010, doi: 10.1016/j.telpol.2009.11.011.
 31.  *Ericsson Mobility Report*, Ericsson, vol. 20, no. 1, pp. 1–20, 2020.
 32.  Federal Communications Commission (FCC), *Rural Digital Opportunity Fund Overview*, FCC, 2020. [https://www.fcc.gov/auction/904](https://www.fcc.gov/auction/904)
 33.  J. Klamkin, *Research on Photonic Integrated Circuits*, University of California, Santa Barbara, 2020.
