@@ -31,8 +31,8 @@
 29.  N. Czernich, O. Falck, T. Kretschmer, and L. Woessmann, "Broadband infrastructure and economic growth," *The Economic Journal*, vol. 121, no. 552, pp. 505–532, 2011, doi: 10.1111/j.1468-0297.2011.02420.x.
 30.  J. M. Bauer, "Regulation, public policy, and investment in communications infrastructure," *Telecommunications Policy*, vol. 34, no. 1–2, pp. 65–79, 2010, doi: 10.1016/j.telpol.2009.11.011.
 31.  B. E. Whitacre, S. Strover, and R. Gallardo, "How much does broadband infrastructure matter? Decomposing the metro–non-metro adoption gap with the help of the National Broadband Map," *Government Information Quarterly*, vol. 32, no. 3, pp. 261–269, 2015, doi: 10.1016/j.giq.2015.03.002.
-32.  Federal Communications Commission (FCC), *Rural Digital Opportunity Fund Overview*, FCC, 2020. [https://www.fcc.gov/auction/904](https://www.fcc.gov/auction/904)
-33.  J. Klamkin, *Research on Photonic Integrated Circuits*, University of California, Santa Barbara, 2020.
+32.  I. J. Núñez, "Estimating private costs in a descending clock auction: The FCC's rural digital opportunity fund," *Telecommunications Policy*, vol. 49, no. 6, 102975, 2025, doi: 10.1016/j.telpol.2025.102975.
+33.  M. J. R. Heck, J. F. Bauters, M. L. Davenport, J. K. Doylend, S. Jain, G. Kurczveil, S. Srinivasan, Y. Tang, and J. E. Bowers, "Hybrid silicon photonic integrated circuit technology," *IEEE Journal of Selected Topics in Quantum Electronics*, vol. 19, no. 4, 6100117, 2013, doi: 10.1109/JSTQE.2012.2235413.
 34.  *Smart cities as urban innovation: Focusing on the Seoul smart city project*, Journal of Innovation and Knowledge, vol. 1, no. 1, pp. 1–11, 2016.
 35.  T. Bakıcı, E. Almirall, and J. Wareham, "A smart city initiative: The case of Barcelona," *Journal of the Knowledge Economy*, vol. 4, no. 2, pp. 135–148, 2013. ​
 36.  Mayor’s Office of the Chief Technology Officer, *2021 Impact Report*, New York City Government, 2021. [https://www.nyc.gov/assets/cto/downloads/annual-reports/2021\_impact\_report.pdf](https://www.nyc.gov/assets/cto/downloads/annual-reports/2021_impact_report.pdf)
