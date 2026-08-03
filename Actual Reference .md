@@ -7,7 +7,7 @@
 5.  R. Kitchin, The real-time city? Big data and smart urbanism, *GeoJournal*, vol. 79, no. 1, pp. 1–14, 2014.
 6.  Z. Allam and Z. A. Dhunny, On big data, artificial intelligence and smart cities, *Cities*, vol. 89, pp. 80–91, 2019.
 7.  B. Thormundsson, *Smart city initiatives global spending 2018–2023*, Statista, Mar. 17, 2022.
-8.  J. Manyika, M. Chui, P. Bisson, L. Woetzel, R. Dobbs, J. Bughin, and D. Aharon, *The Internet of Things: Mapping the Value Beyond the Hype*, McKinsey & Company, 2015.
+8.  V. Albino, U. Berardi, and R. M. Dangelico, "Smart cities: Definitions, dimensions, performance, and initiatives," *Journal of Urban Technology*, vol. 22, no. 1, pp. 3–21, 2015, doi: 10.1080/10630732.2014.942092.
 9.  Fortune Business Insights, *Data Center Market Size, Share & Industry Analysis, By Component, By Data Center Type, By Tier Level, By Data Center Size, By Industry, and Regional Forecast, 2025–2032*, Fortune Business Insights Report, Aug. 2024.
 10.  K. Costello and M. Rimol, *Forecast: Public Cloud Services, Worldwide, 2021*, Gartner, Apr. 21, 2021.
 11.  S. Shaheen, N. Chan, A. Bansal, and A. Cohen, *Shared mobility: Definitions, industry developments, and early understanding*, Transportation Research Record: Journal of the Transportation Research Board, vol. 2536, no. 1, pp. 26–34, 2016.
