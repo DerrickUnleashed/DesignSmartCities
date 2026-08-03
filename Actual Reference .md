@@ -11,7 +11,7 @@
 9.  D. Eckhoff and I. Wagner, "Privacy in the smart city—Applications, technologies, challenges, and solutions," *IEEE Communications Surveys & Tutorials*, vol. 20, no. 1, pp. 489–516, 2018, doi: 10.1109/COMST.2017.2748998.
 10.  A. Botta, W. de Donato, V. Persico, and A. Pescapé, "Integration of cloud computing and Internet of Things: A survey," *Future Generation Computer Systems*, vol. 56, pp. 684–700, 2016, doi: 10.1016/j.future.2015.09.021.
 11.  S. Shaheen, N. Chan, A. Bansal, and A. Cohen, *Shared mobility: Definitions, industry developments, and early understanding*, Transportation Research Record: Journal of the Transportation Research Board, vol. 2536, no. 1, pp. 26–34, 2016.
-12.  C. Malone, *Smart Traffic Management to Generate Revenue of $18.5 Billion Globally by 2028; Accelerated by Smart Cities’ Investment*, Juniper Research, Nov. 6, 2023.
+12.  J. Zhang, F.-Y. Wang, K. Wang, W.-H. Lin, X. Xu, and C. Chen, "Data-driven intelligent transportation systems: A survey," *IEEE Transactions on Intelligent Transportation Systems*, vol. 12, no. 4, pp. 1624–1639, 2011, doi: 10.1109/TITS.2011.2158001.
 13.  W. Z. Khan, M. H. U. Rehman, H. M. Zangoti, et al., *Industrial internet of things: Recent advances, enabling technologies, and open challenges*, Computers & Electrical Engineering, vol. 81, art. no. 106522, 2021.
 14.  E. E. Joh, *Feeding the machine: Policing, crime data, and algorithms*, William & Mary Bill of Rights Journal, vol. 26, no. 2, pp. 287–310, 2017.
 15.  International Energy Agency (IEA), *Smart Grids*, IEA Report, 2021. https://www.iea.org/energy-system/electricity/smart-grids
