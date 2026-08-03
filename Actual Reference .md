@@ -9,7 +9,7 @@
 7.  B. Thormundsson, *Smart city initiatives global spending 2018–2023*, Statista, Mar. 17, 2022.
 8.  V. Albino, U. Berardi, and R. M. Dangelico, "Smart cities: Definitions, dimensions, performance, and initiatives," *Journal of Urban Technology*, vol. 22, no. 1, pp. 3–21, 2015, doi: 10.1080/10630732.2014.942092.
 9.  D. Eckhoff and I. Wagner, "Privacy in the smart city—Applications, technologies, challenges, and solutions," *IEEE Communications Surveys & Tutorials*, vol. 20, no. 1, pp. 489–516, 2018, doi: 10.1109/COMST.2017.2748998.
-10.  K. Costello and M. Rimol, *Forecast: Public Cloud Services, Worldwide, 2021*, Gartner, Apr. 21, 2021.
+10.  A. Botta, W. de Donato, V. Persico, and A. Pescapé, "Integration of cloud computing and Internet of Things: A survey," *Future Generation Computer Systems*, vol. 56, pp. 684–700, 2016, doi: 10.1016/j.future.2015.09.021.
 11.  S. Shaheen, N. Chan, A. Bansal, and A. Cohen, *Shared mobility: Definitions, industry developments, and early understanding*, Transportation Research Record: Journal of the Transportation Research Board, vol. 2536, no. 1, pp. 26–34, 2016.
 12.  C. Malone, *Smart Traffic Management to Generate Revenue of $18.5 Billion Globally by 2028; Accelerated by Smart Cities’ Investment*, Juniper Research, Nov. 6, 2023.
 13.  W. Z. Khan, M. H. U. Rehman, H. M. Zangoti, et al., *Industrial internet of things: Recent advances, enabling technologies, and open challenges*, Computers & Electrical Engineering, vol. 81, art. no. 106522, 2021.
