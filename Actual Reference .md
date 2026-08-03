@@ -6,7 +6,7 @@
 4.  M. Batty, K. W. Axhausen, F. Giannotti, et al., *Smart cities of the future*, The European Physical Journal Special Topics, vol. 214, no. 1, pp. 481–518, 2012.
 5.  R. Kitchin, The real-time city? Big data and smart urbanism, *GeoJournal*, vol. 79, no. 1, pp. 1–14, 2014.
 6.  Z. Allam and Z. A. Dhunny, On big data, artificial intelligence and smart cities, *Cities*, vol. 89, pp. 80–91, 2019.
-7.  B. Thormundsson, *Smart city initiatives global spending 2018–2023*, Statista, Mar. 17, 2022.
+7.  M. J. N. Han and M. J. Kim, *A systematic review of smart city research from an urban context perspective*, Cities, vol. 150, art. 105027, 2024, doi: 10.1016/j.cities.2024.105027.
 8.  V. Albino, U. Berardi, and R. M. Dangelico, "Smart cities: Definitions, dimensions, performance, and initiatives," *Journal of Urban Technology*, vol. 22, no. 1, pp. 3–21, 2015, doi: 10.1080/10630732.2014.942092.
 9.  D. Eckhoff and I. Wagner, "Privacy in the smart city—Applications, technologies, challenges, and solutions," *IEEE Communications Surveys & Tutorials*, vol. 20, no. 1, pp. 489–516, 2018, doi: 10.1109/COMST.2017.2748998.
 10.  A. Botta, W. de Donato, V. Persico, and A. Pescapé, "Integration of cloud computing and Internet of Things: A survey," *Future Generation Computer Systems*, vol. 56, pp. 684–700, 2016, doi: 10.1016/j.future.2015.09.021.
