@@ -30,15 +30,15 @@
 28.  M. Forzati and C. Mattsson, "Twenty years of open fibre network in Stockholm: A socio-economic study," in *Proc. 15th International Conference on Transparent Optical Networks (ICTON)*, 2013, doi: 10.1109/ICTON.2013.6602829.
 29.  N. Czernich, O. Falck, T. Kretschmer, and L. Woessmann, "Broadband infrastructure and economic growth," *The Economic Journal*, vol. 121, no. 552, pp. 505–532, 2011, doi: 10.1111/j.1468-0297.2011.02420.x.
 30.  J. M. Bauer, "Regulation, public policy, and investment in communications infrastructure," *Telecommunications Policy*, vol. 34, no. 1–2, pp. 65–79, 2010, doi: 10.1016/j.telpol.2009.11.011.
-31.  *Ericsson Mobility Report*, Ericsson, vol. 20, no. 1, pp. 1–20, 2020.
+31.  B. E. Whitacre, S. Strover, and R. Gallardo, "How much does broadband infrastructure matter? Decomposing the metro–non-metro adoption gap with the help of the National Broadband Map," *Government Information Quarterly*, vol. 32, no. 3, pp. 261–269, 2015, doi: 10.1016/j.giq.2015.03.002.
 32.  Federal Communications Commission (FCC), *Rural Digital Opportunity Fund Overview*, FCC, 2020. [https://www.fcc.gov/auction/904](https://www.fcc.gov/auction/904)
 33.  J. Klamkin, *Research on Photonic Integrated Circuits*, University of California, Santa Barbara, 2020.
 34.  *Smart cities as urban innovation: Focusing on the Seoul smart city project*, Journal of Innovation and Knowledge, vol. 1, no. 1, pp. 1–11, 2016.
 35.  T. Bakıcı, E. Almirall, and J. Wareham, "A smart city initiative: The case of Barcelona," *Journal of the Knowledge Economy*, vol. 4, no. 2, pp. 135–148, 2013. ​
 36.  Mayor’s Office of the Chief Technology Officer, *2021 Impact Report*, New York City Government, 2021. [https://www.nyc.gov/assets/cto/downloads/annual-reports/2021\_impact\_report.pdf](https://www.nyc.gov/assets/cto/downloads/annual-reports/2021_impact_report.pdf)
-37.  Accardi, D., Farren, D., & Tucker, C. *Communications Infrastructure Upgrade: The Need for Deep Fiber*. Deloitte Consulting LLP, 2017.
-38.  Federal Communications Commission, *FCC Concludes Largest Ever Spectrum Auction, Advancing American Leadership in 5G*, Public Notice, Feb. 24, 2021. [https://docs.fcc.gov/public/attachments/DOC-363000A1.pdf](https://docs.fcc.gov/public/attachments/DOC-363000A1.pdf)
-39.  M. Reardon, "Verizon, AT&T and T-Mobile Dominate $81 Billion 5G Spectrum Auction," *CNET*, Feb. 24, 2021.
+37.  M. Agiwal, A. Roy, and N. Saxena, "Next generation 5G wireless networks: A comprehensive survey," *IEEE Communications Surveys & Tutorials*, vol. 18, no. 3, pp. 1617–1655, 2016, doi: 10.1109/COMST.2016.2532458.
+38.  A. Gupta and R. K. Jha, "A survey of 5G network: Architecture and emerging technologies," *IEEE Access*, vol. 3, pp. 1206–1232, 2015, doi: 10.1109/ACCESS.2015.2461602.
+39.  X. Foukas, G. Patounas, A. Elmokashfi, and M. K. Marina, "Network slicing in 5G: Survey and challenges," *IEEE Communications Magazine*, vol. 55, no. 5, pp. 94–100, 2017, doi: 10.1109/MCOM.2017.1600951.
 40.  C. Perera, A. Zaslavsky, P. Christen, and D. Georgakopoulos, "Context-aware computing for the Internet of Things: A survey," *IEEE Communications Surveys & Tutorials*, vol. 16, no. 1, pp. 414–454, 2014.
 41.  I. A. T. Hashem, I. Yaqoob, N. B. Anuar, et al., "The rise of 'big data' on cloud computing: Review and open research issues," *Information Systems*, vol. 47, pp. 98–115, 2015.
 42.  D. C. Marinescu, *Cloud Computing: Theory and Practice*, Elsevier, 2013.
