@@ -63,16 +63,16 @@
 61.  R. Cervero, "Mixed land-uses and commuting: Evidence from the American Housing Survey," *Transportation Research Part A: Policy and Practice*, vol. 30, no. 5, pp. 361–377, 1996, doi: 10.1016/0965-8564(95)00033-X.
 62.  R. Fisher, R. Leite, and R. Weber, "Value creation, capture, and destruction: Hudson Yards and the false promise of self-financing mega-projects," *Journal of the American Planning Association*, 2022, doi: 10.1080/01944363.2022.2026808.
 63.  J. Szolomicki and H. Golasz-Szolomicka, "The Marina Bay Sands complex in Singapore: A modern marvel of structure and technology," *IOP Conference Series: Materials Science and Engineering*, vol. 960, art. 022051, 2020, doi: 10.1088/1757-899X/960/2/022051.
-64.  Environmental Protection Agency, "Green Infrastructure: Benefits and Implementation," Environmental Protection Agency, 2020.
-65.  World Green Building Council, "Sustainable Urban Design: Principles and Benefits," World Green Building Council, 2021.
-66.  Journal of Environmental Psychology, "The Impact of Green Spaces on Mental Health and Well-Being," Journal of Environmental Psychology, 2019.
-67.  Tang, Z., Dunning, L., & Deskins, M., "The High Line: An example of adaptive reuse in urban development," Journal of Urban Planning and Development, vol. 140, no. 3, pp. 1–9, 2014.
-68.  Droege, P., "Urban sustainability and the Vauban district: A case study," Sustainable Cities and Society, vol. 33, pp. 64–72, 2017.
-69.  Barcelona City Council, "ICT Integration in Barcelona, Spain: Reports from Barcelona City Council indicate significant energy and water savings due to the integration of ICT in urban management," Barcelona City Council, 2020.
-70.  Land Transport Authority, "Intelligent Transport Systems," Land Transport Authority, 2020.
-71.  New York City Department of Sanitation (DSNY), "Statistics," New York City Government, 2021.
-72.  Alibaba Cloud, "City Brain: Cloud Computing and Data Technology Help Our City," Alibaba, 2016.​
-73.  Smart Dubai, "Dubai Blockchain Strategy," Smart Dubai, 2016.
+64.  D. E. Bowler, L. Buyung-Ali, T. M. Knight, and A. S. Pullin, "Urban greening to cool towns and cities: A systematic review of the empirical evidence," *Landscape and Urban Planning*, vol. 97, no. 3, pp. 147–155, 2010, doi: 10.1016/j.landurbplan.2010.05.006.
+65.  P. Nejat, F. Jomehzadeh, M. M. Taheri, M. Gohari, and M. Z. A. Majid, "A global review of energy consumption, CO2 emissions and policy in the residential sector (with an overview of the top ten CO2 emitting countries)," *Renewable and Sustainable Energy Reviews*, vol. 43, pp. 843–862, 2015, doi: 10.1016/j.rser.2014.11.066.
+66.  C. Twohig-Bennett and A. Jones, "The health benefits of the great outdoors: A systematic review and meta-analysis of greenspace exposure and health outcomes," *Environmental Research*, vol. 166, pp. 628–637, 2018, doi: 10.1016/j.envres.2018.06.030.
+67.  S. Lang and J. Rothenberg, "Neoliberal urbanism, public space, and the greening of the growth machine: New York City's High Line park," *Environment and Planning A*, vol. 49, no. 8, pp. 1743–1761, 2017, doi: 10.1177/0308518X16677969.
+68.  G. J. Coates, "The sustainable urban district of Vauban in Freiburg, Germany," *International Journal of Sustainable Development and Planning*, vol. 8, no. 4, pp. 265–286, 2013, doi: 10.2495/DNE-V8-N4-265-286.
+69.  I. Capdevila and M. I. Zarlenga, "Smart city or smart citizens? The Barcelona case," *Journal of Strategy and Management*, vol. 8, no. 3, pp. 266–282, 2015, doi: 10.1108/JSMA-03-2015-0030.
+70.  E. Aloupogianni, F. Doctor, C. Karyotis, T. Maniak, R. Tang, and R. Iqbal, "An AI-based digital twin framework for intelligent traffic management in Singapore," in *Proc. 2024 International Conference on Electrical, Computer and Energy Technologies (ICECET)*, Sydney, Australia, 2024, pp. 1–6, doi: 10.1109/ICECET61485.2024.10698642.
+71.  M. A. Hannan, M. A. Al Mamun, A. Hussain, H. Basri, and R. A. Begum, "A review on technologies and their usage in solid waste monitoring and management systems: Issues and challenges," *Waste Management*, vol. 43, pp. 509–523, 2015, doi: 10.1016/j.wasman.2015.05.033.
+72.  J. Zhang, X.-S. Hua, J. Huang, X. Shen, J. Chen, Q. Zhou, Z. Fu, and Y. Zhao, "City brain: Practice of large-scale artificial intelligence in the real world," *IET Smart Cities*, vol. 1, no. 1, pp. 28–37, 2019, doi: 10.1049/iet-smc.2019.0034.​
+73.  S. Ølnes, J. Ubacht, and M. Janssen, "Blockchain in government: Benefits and implications of distributed ledger technology for information sharing," *Government Information Quarterly*, vol. 34, no. 3, pp. 355–364, 2017, doi: 10.1016/j.giq.2017.09.007.
 74.  Seoul Metropolitan Government, "Open Data Plaza: Enhancing Transparency and Citizen Engagement," 2017.
 75.  Estonian Government, *e-Estonia: The Digital Society*, 2019.
 76.  Reykjavik City Council, *Better Reykjavik: A Platform for Citizen Engagement*, 2023.
