@@ -1,0 +1,1056 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Converted from IEEEtran (main.tex) to the Springer Nature sn-jnl   %%
+%% template (sn-article.tex). Content is preserved from the original %%
+%% manuscript; only formatting/structure was adapted to sn-jnl.      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{pgfplots}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+%% Additional packages required by the original manuscript (main.tex)
+\usepackage{url}%
+\usepackage{array}%
+\usepackage{adjustbox}%
+\usepackage{tabularx}%
+%%%%
+
+\graphicspath{{figs/}}
+\pgfplotsset{compat=1.18}
+
+%% as per the requirement new theorem styles can be included as shown below
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+\newtheorem{proposition}[theorem]{Proposition}%
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+
+\begin{document}
+
+\title[Building the Cities of Tomorrow]{Building the Cities of Tomorrow: Technology, Infrastructure, and Sustainability}
+
+%%=============================================================%%
+%% GivenName	-> \fnm{Joergen W.}
+%% Particle	-> \spfx{van der} -> surname prefix
+%% FamilyName	-> \sur{Ploeg}
+%% Suffix	-> \sfx{IV}
+%%=============================================================%%
+
+\author[1]{\fnm{Jaishnu Sree} \sur{Biradha}}
+
+\author*[1]{\fnm{Suseela} \sur{Sellamuthu}}\email{suseela.s@vit.ac.in}
+
+\author[1]{\fnm{Bhavadharini} \sur{R. M.}}
+
+\author[1]{\fnm{Krithiga} \sur{R.}}
+
+\author[1]{\fnm{Derrick} \sur{Richard}}
+
+\author[2]{\fnm{Vedhapriyavadhana} \sur{Rajamani}}\email{vedhapriyavadhana.rajamani@uws.ac.uk}
+
+\affil*[1]{\orgdiv{School of Computer Science and Engineering (SCOPE)}, \orgname{Vellore Institute of Technology}, \orgaddress{\city{Chennai}, \state{Tamil Nadu}, \country{India}}}
+
+\affil[2]{\orgdiv{School of Computing, Engineering and Physical Sciences}, \orgname{University of the West of Scotland}, \orgaddress{\city{London}, \country{U.K.}}}
+
+\abstract{Smart cities constitute a contemporary model of urban advancement in which data-centric technologies are integrated with advanced governance and operational strategies to enhance inhabitants’ well-being, promote environmental sustainability, and support economic progress. This review explores the major technological developments underpinning smart urbanisation, with particular emphasis on the Internet of Things (IoT), artificial intelligence (AI), big data processing, and renewable energy solutions. It also considers the essential infrastructure required for their implementation, encompassing intelligent mobility systems, energy-conscious buildings, advanced waste-management facilities, and dependable digital connectivity. Using evidence from urban initiatives implemented in Dubai, Barcelona, Singapore, New York City, and several other prominent metropolitan areas, the paper distils practical lessons and best practices from real-world deployments. It further examines the international partnerships, multilateral initiatives, and interoperability standards that enable smart city programs to scale and interconnect across borders. The results are consolidated into a forward-looking framework for advancing smart urban environments, emphasising continuous cooperation among relevant stakeholders, well-established governance and regulatory structures, and comprehensive long-range strategies to manage emerging urban challenges.}
+
+\keywords{Artificial Intelligence (AI), Digital Infrastructure, Global Collaboration, Internet of Things (IoT), Smart Cities, Sustainability}
+
+\maketitle
+
+\section{Introduction}
+During the twenty-first century, smart cities have become a prominent paradigm for urban living, reflecting the cumulative impact of sustained technological advancement and innovation. Their underlying framework is built upon Information and Communication Technologies (ICT), which are employed to enhance residents’ living conditions through more effective provision and management of essential urban services. These applications encompass digitally enabled healthcare, intelligent mobility, technology-supported retail, connected residential environments, education, as well as integrated energy and transportation infrastructure, as illustrated in Fig.~\ref{fig:services}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{image-001.png}
+\caption{Smart Cities Services}
+\label{fig:services}
+\end{figure}
+
+Integrating digital systems throughout urban infrastructure enables cities to reduce the use of resources, improve the quality of administrative decisions, and encourage greater participation from citizens. Consequently, smart urbanization extends beyond the deployment of advanced physical technologies; it involves establishing interconnected urban ecosystems in which data-based approaches are applied to manage increasingly complex consequences of population growth, particularly transportation congestion, environmental pollution, and limited availability of natural resources \cite{r1,r5}. Fig.~\ref{fig:framework} illustrates a smart urban environment as an integrated network of IoT-enabled devices, sensing units, and cloud computing infrastructure, collectively gathering, transmitting, and analyzing data continuously in real time.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{image-002.png}
+\caption{Smart City Framework}
+\label{fig:framework}
+\end{figure}
+
+This real-time information base allows city administrations to make better-informed decisions, whether in optimizing traffic flow, regulating energy distribution, or improving public safety \cite{r1}. Road-monitoring systems, for example, assess pavement and traffic conditions and adjust signal timing accordingly, reducing congestion and emissions \cite{r3}. Smart grids allocate electricity more efficiently, cutting waste and directing power to where it is most needed. Beyond raising operational efficiency, such technologies help cities meet sustainability targets that become more pressing as urban populations continue to grow \cite{r4}. Shao and Min catalog a broad range of sustainability measures relevant to smart city development \cite{r107}, while noting that multidimensional sustainability models remain largely confined to conceptual frameworks rather than operational practice. Singh \emph{et al.} take a wider historical view, tracing a decade of technological advances, architectural models, and platforms in smart city research \cite{r108}; their methodological survey of sensing technologies, communication layers, data management, and application domains has a strong technical basis for the study into smart urban development, while also flagging governance integration, citizen engagement, global interoperability, and cross-case comparison as areas that warrant further attention. Han and Kim likewise identify a persistent gap between technology-oriented research and the realities of urban environments, governance structures, infrastructure integration, and international benchmarking \cite{r7}.
+
+Despite the substantial body of literature on smart cities, several important areas remain underexplored. This review addresses the innovation, technology, and infrastructure dimensions of smart city development in a globalised context, while also considering smart governance, inclusiveness, international standards, and comparative examples drawn from leading cities such as Dubai, Singapore, Barcelona, and New York City. It systematically links technological innovation with physical and virtual infrastructure, governance structures, citizen participation, and sustainability goals, and offers a perspective on data privacy, social equity, and regulatory policy that seeks to close the fragmentation and contextual gaps evident in the present literature.
+
+With smart technologies spread around the world, collaboration and standardisation have become increasingly central to their success. Cities are turning to international standards, partnerships and city networks to share best practices, data and resources, and to build the interoperability that connects individual smart cities into a genuinely global movement. Singapore, Barcelona, Dubai, and New York City stand out as examples of urban innovation and international collaboration \cite{r8}. At the same time, the challenges facing smart cities -- "data privacy, security, inclusivity, and the need for resilient policy frameworks" -- have grown in step with their capabilities, since the same technologies that unlock efficiency also increase the volume of data that must be managed responsibly and the difficulty of ensuring equitable access to their benefits \cite{r9,r101}.
+
+This review addresses policymakers, academics, and professionals working across the urban technology sector in developed as well as developing economies, with the aim of clarifying the progression of smart cities, the difficulties associated with their implementation, and the strategies required to create urban environments that are better connected, adaptable, and accessible to diverse populations. It further examines the integration of technological advancement, innovation, and physical infrastructure as mechanisms for reshaping urban living, while emphasizing the importance of cross-border collaboration in expanding these advantages among prominent metropolitan areas, including Dubai, Barcelona, Singapore, and New York City. \cite{r12,r13}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{image-002(1).png}
+\caption{Glimpse of Review Paper}
+\label{fig:outline}
+\end{figure}
+
+The structure of the paper is illustrated in Fig.~\ref{fig:outline}. Section II focuses on the infrastructure that supports smart urban environments, while Section III reviews major innovations and technological developments. Section IV considers the interconnectedness of smart cities at the global level. Section V investigates the contribution of the Sustainable Development Goals (SDGs) to smart city development. Section VI outlines the principal challenges within the domain and considers potential avenues for future advancement. Finally, Section VII presents the concluding remarks.
+
+\section{Smart City Infrastructure}
+Rapid urban expansion and increasing population levels have created a growing need for cities to be managed in ways that are both effective and environmentally responsible, making infrastructure a fundamental element of smart urban development and operation. Smart city infrastructure combines established municipal assets with digital systems to improve the performance of public services, optimize the use of resources, and strengthen communication capabilities. Such integration enables technology-driven urban services that enhance residents’ well-being while contributing to long-term sustainability. Accordingly, the effective coordination of infrastructure components is essential for the successful deployment of smart city initiatives. As illustrated in Fig.~\ref{fig:infrastructure}, this section classifies the infrastructure requirements into three broad dimensions: digital infrastructure, physical infrastructure, and urban planning and design.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{image-003.png}
+\caption{Smart City Infrastructure}
+\label{fig:infrastructure}
+\end{figure}
+
+\subsection{Technological Infrastructure Supporting Smart Urban Environments}
+Urban infrastructure has undergone substantial transformation across different historical periods. Early urban settlements primarily depended on fundamental systems for transportation, water provision, and sanitation. During the Industrial Revolution, cities incorporated transformative technologies such as railway networks, electric power grids, and telecommunication infrastructure. By the latter part of the twentieth century, the emergence of the internet and digital computing introduced another layer of technological capability. In modern cities, these established infrastructure systems are increasingly interconnected with intelligent technologies to respond to the complex demands associated with contemporary urbanization.
+
+Digital infrastructure forms the technological foundation of smart urban systems, facilitating connectivity, information exchange, and coordinated communication between diverse municipal operations. As illustrated in Fig.~\ref{fig:components}, it integrates information and communication technologies (ICT), distributed sensing systems, cloud-based resources, and data-center facilities to enable coordinated administration and timely, data-informed decisions. These capabilities allow information to be acquired, retained, analyzed, and transmitted throughout the urban environment. Its principal elements include IoT-enabled sensors and devices, communication and networking layers, edge-based processing, cloud computing environments, and applications designed for smart city services.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.72\linewidth,height=0.5\textheight,keepaspectratio]{image-004.png}
+\caption{Components of Smart Cities}
+\label{fig:components}
+\end{figure}
+
+Digital infrastructure allows smart cities to strengthen service delivery and operational effectiveness while extending connectivity to citizens. It underpins the latest generation of urban technologies aimed at improving city life, managing resources, and enhancing service quality, and is turning cities into platforms enabling urban environments to support continuous observation, evidence-based decisions, and adaptive responses to changing conditions. Investment in this infrastructure continues to grow, and studies have documented the substantial economic returns generated by smart city investment \cite{r102}.
+
+\subsubsection{Key Elements of Digital Infrastructure}
+As presented in Fig.~\ref{fig:components}, the integration of digital infrastructure elements establishes a coordinated environment for the continuous movement and exchange of information. Sensors embedded within IoT systems acquire observations from the surrounding physical environment, which are subsequently retained and analyzed through data-center facilities, including specialized urban data centers designed for city-related information. Cloud-based infrastructure complements these capabilities by providing computing capacity that can be dynamically scaled according to demand. Together, these components operate through common technologies, communication protocols, and technical standards, enabling reliable interoperability and information sharing. This interconnected digital foundation supports an expanding ecosystem of urban applications and services, thereby facilitating technological innovation throughout increasingly digitized environments.
+
+IoT-enabled sensing devices continuously observe diverse urban conditions, such as atmospheric temperature, moisture levels, pollution indicators, vehicular movement, and patterns of electricity use. When deployed across different locations, these devices provide continuously updated information that enables authorities to supervise and regulate municipal operations. For example, an intelligent traffic signal can receive inputs from connected sensors and dynamically modify its timing based on prevailing vehicle density, thereby helping alleviate road congestion and reduce associated emissions. The adoption of IoT technologies in mobility, energy systems, and urban asset management can also create significant economic benefits for municipalities \cite{r15}.
+
+Achieving these benefits depends on an integrated approach that addresses the choice and placement of sensing devices, reliable mechanisms for acquiring and transmitting information, robust methods for data processing and interpretation, and seamless compatibility with established urban systems. Such an approach must also incorporate stringent safeguards for cybersecurity, personal privacy, and responsible ethical practices. When these requirements are addressed cohesively, cities can derive greater value from IoT technologies while strengthening their capacity to operate intelligently, withstand disruptions, and pursue sustainable development objectives \cite{r15}.
+
+The continued evolution of Internet of Things (IoT) technologies has played a significant role in advancing intelligent urban environments by providing the technological basis for automated, innovative, and interoperable services across diverse city functions. To support these IoT ecosystems, data centers accommodate the computing, storage, and networking infrastructure required to handle the substantial quantities of information produced by connected devices. Contemporary facilities increasingly employ virtualization and container-based architectures to improve hardware utilization, enhance operational efficiency, and maintain high levels of service availability. Consequently, data centers serve as a fundamental element of smart city infrastructure, delivering the scalable processing and storage resources necessary for managing and interpreting the extensive datasets produced by urban systems \cite{r16}.
+
+Cloud-based computing delivers adaptable processing and storage capabilities through internet-connected infrastructure, enabling municipalities to implement smart applications while reducing dependence on substantial investments in dedicated on-premises hardware. These platforms provide services for information storage, large-scale data analysis, and machine learning, all of which support the development and deployment of intelligent urban applications. For example, information originating from multiple heterogeneous sources can be consolidated within a cloud environment and analyzed to produce useful insights that assist municipal authorities in making informed decisions. The increasing use of cloud infrastructure for storage, analytical workloads, and machine learning also demonstrates the growing convergence between cloud computing and IoT technologies within modern urban ecosystems \cite{r10}.
+
+Urban data platforms function as integrated repositories that consolidate information obtained from connected sensors, online social networks, publicly accessible datasets, and other digital sources. By providing a shared environment for information exchange, they facilitate coordination among municipal departments and other urban stakeholders, thereby enabling more unified approaches to city administration. Analytical and visualization capabilities further assist authorities in interpreting complex datasets and converting those findings into practical policy measures. For example, combining information on road conditions, meteorological factors, and public transportation within a single platform can support more efficient management of urban mobility.
+
+\subsubsection{Implications of Digital Infrastructure}
+Digital infrastructure is transforming urban transportation through the adoption of emerging technologies that improve the organization and operation of mobility networks. Studies examining ICT-enabled integrated service frameworks for smart mobility demonstrate their potential to promote sustainability, improve transportation efficiency, and enhance the overall quality of life within urban centers \cite{r107,r15}. The combination of IoT sensing technologies with data-driven analytical methods enables more responsive traffic management, helping minimize congestion and shorten journey durations. At the same time, real-time synchronization of public transportation schedules and service availability can strengthen both the reliability and operational efficiency of transit networks. Smart parking provides a practical illustration of this approach, where connected sensors continuously report vacant spaces, allowing motorists to locate parking more quickly while limiting vehicle emissions associated with prolonged searches. Furthermore, intelligent traffic management solutions can enhance transportation operations and road safety while alleviating congestion, thereby contributing to significant economic gains for urban areas \cite{r12}.
+
+Digital infrastructure contributes to urban public safety by enabling sophisticated surveillance mechanisms and data-informed emergency response. Technologies based on facial recognition and video analysis facilitate continuous observation and prompt identification of incidents, improving authorities’ awareness of developing situations. Similarly, IoT-based devices, including acoustic gunshot detection systems, can notify law-enforcement personnel of possible threats at an early stage, allowing intervention before situations intensify. Adaptive street-lighting systems provide an additional safety measure by automatically modifying illumination in response to activity detected within particular areas, potentially discouraging criminal behavior \cite{r13,r17}. A large-scale implementation of this model can be observed in New York City’s Domain Awareness System, which integrates data from more than 9,000 cameras to deliver real-time information to law-enforcement agencies. The system has contributed to crime-reduction efforts by supporting quicker and more informed decision-making during high-priority incidents \cite{r14,r18}.
+
+Smart energy management is facilitated by digital infrastructure through continuous observation and regulation of energy consumption across buildings and municipal facilities. Studies examining IoT-enabled energy management solutions for intelligent buildings and urban infrastructure indicate that these technologies support systematic data acquisition and analysis, allowing energy usage to be measured, regulated, and optimized. Such capabilities can reduce the environmental footprint associated with energy consumption while simultaneously promoting greater operational efficiency and long-term sustainability \cite{r108,r19}.
+
+Smart grid technologies rely on IoT-enabled sensing devices to continuously monitor electricity conditions and coordinate supply with demand, thereby limiting unnecessary energy losses and enhancing overall system efficiency. Smart meters complement these capabilities by providing users with immediate information about their electricity consumption, encouraging more conscious and efficient usage patterns. The information collected through smart metering can also enable municipalities and utility providers to introduce dynamic tariff structures, motivating consumers to shift energy-intensive activities toward periods of lower demand. Furthermore, the integration of sophisticated sensing and communication mechanisms within smart grids can significantly decrease losses occurring during electricity transmission and distribution, an important consideration given the high energy requirements of many smart city applications and services \cite{r98}.
+
+Satellite broadband extends internet access to remote or rural regions where terrestrial broadband is unavailable. Although capable of speeds up to 100 Mbps, satellite broadband typically carries more latency because of more distances signals have to go to and from orbit; even so, space services continue their expansion as a complement to terrestrial networks, helping to close connectivity gaps in remote and underserved areas \cite{r20,r21}.
+
+Wireless broadband technologies, represented by fourth-generation LTE and emerging 5G networks, provide high-speed connectivity while eliminating the dependence on fixed physical cabling. Their wireless architecture offers a level of adaptability and scalability that can be difficult to achieve through conventional wired communication systems. These networks are particularly important for supporting mobile users and delivering internet services to areas where deploying traditional wired infrastructure is technically challenging or economically impractical. As 5G deployment continues to expand and smart city systems require increasingly greater network capacity, the importance of wireless broadband connectivity is expected to increase further \cite{r22}.
+
+Fast Internet serves as a fundamental communication layer for smart buildings and residential environments, enabling the integration and coordinated operation of IoT devices, security infrastructure, and intelligent appliances. Through dependable network connectivity, occupants can remotely monitor and regulate functions such as energy consumption, household security, and indoor environmental conditions. Consequently, stable and sufficiently fast broadband access is essential for supporting the remote supervision and control capabilities that characterize connected homes and intelligent buildings \cite{r23}.
+
+Fast Internet connectivity is also a critical component of intelligent transportation infrastructure, linking autonomous vehicles, connected street-lighting systems, and real-time transit management platforms to facilitate coordinated mobility and more efficient traffic operations. Such connectivity can contribute to smoother vehicle movement and help alleviate congestion by enabling continuous communication between transportation assets. Given that human error accounts for a substantial proportion of road accidents, the integration of broadband-enabled connectivity with automated and connected driving technologies provides an important opportunity to improve overall road safety \cite{r24}.
+
+Fast Internet also enables efficient online delivery of government services, increasing transparency while lowering administrative costs; citizens can make payments and conduct civic business from home rather than visiting a government office in person. "Countries with more developed broadband infrastructure tend to post higher e-government development index (EGDI) scores, reflecting more efficient access to electronic government services" \cite{r25}.
+
+Within the education sector, reliable broadband connectivity has become a fundamental requirement for effective online learning, enabling students and educators to access digital resources, participate in virtual classrooms, and use collaborative learning tools. It also allows educational platforms to serve learners across geographical boundaries. The importance of this connectivity became particularly evident during the COVID-19 pandemic, when widespread school closures necessitated an abrupt transition to remote instruction. For a large number of learners around the world, broadband-supported educational platforms consequently represented the primary available means of maintaining access to formal education \cite{r26}.
+
+Seoul, South Korea, has established a comprehensive high-capacity broadband infrastructure capable of providing gigabit-level connectivity and supporting numerous smart city services, such as intelligent transportation, public safety programs, and digital government systems \cite{r27}. In a similar manner, Stockholm has developed a city-owned fiber-optic network that provides high-speed internet connectivity to almost all residential and commercial premises, creating a foundation for applications including smart energy networks, intelligent mobility systems, and environmentally sustainable urban development \cite{r28}.
+
+Enhanced broadband infrastructure carries substantial economic benefits and raises living standards: faster internet access supports business and productivity, fuels innovation, and provides access to healthcare, public services and education. "Empirical research on OECD countries has found that a ten-percentage-point increase in broadband penetration raises annual per-capita GDP growth by roughly one percentage point" \cite{r29}.
+
+Broadband infrastructure nonetheless faces significant challenges. High deployment costs -- driven by cable installation, equipment, and maintenance -- make such projects difficult to finance in low-resource areas, while geographic and demographic disparities leave many rural and remote regions without adequate infrastructure, widening the digital divide; access to high-speed internet also continues to depend on socioeconomic factors. Studies in the United States have documented "a persistent gap in broadband access and adoption between metropolitan and non-metropolitan areas" \cite{r31}.
+
+The same connectivity that enables smart city services also exposes them to threats and vulnerabilities: data breaches, cyberattacks, and malware can disrupt services and compromise sensitive information, underscoring the critical importance of cybersecurity to the protection of digital infrastructure. Regulatory hurdles -- including cumbersome permitting procedures, spectrum allocation challenges, and inconsistent regulation across regions -- further complicate broadband deployment; streamlining permitting processes and coordinating spectrum policy are widely viewed as important levers for encouraging investment in broadband infrastructure \cite{r30}.
+
+\subsubsection{Advancements in Digital Technologies}
+Fiber-optic Gigabit Ethernet enables network data rates of at least 1 Gbps, making it an important element of high-capacity Internet infrastructure. It provides dependable, high-speed communication for residential and commercial users while also serving as underlying infrastructure for numerous wireless broadband systems. Defined under the IEEE 802.3 family of standards, the technology has progressed beyond its original gigabit capability to include 10 Gbps, 40 Gbps, and 100 Gbps implementations, allowing networks to accommodate steadily increasing volumes of data traffic.
+
+Wi-Fi 6 (802.11ax) improves substantially on earlier generations of Wi-Fi, supporting speeds up to 9.6 Gbps and handling a far greater number of simultaneous connections, which makes it well suited to smart homes and high-density urban environments. Mesh networks complement this capability by providing continuous Wi-Fi coverage through a web of interconnected nodes.
+
+Ongoing advances in broadband technologies are expected to further expand network capacity through developments such as higher-capacity optical fibers, enhanced transmission techniques, and emerging communication paradigms. Among these are Li-Fi, which conveys information through visible or optical light, and quantum communication, which offers the potential for highly secure information transmission. Research at the University of California, Santa Barbara, for instance, is exploring the use of photonic integrated circuits to enhance the efficiency, scalability, and overall capabilities of fiber-optic communication networks \cite{r33}.
+
+Fifth-generation (5G) wireless networks introduce major enhancements compared with previous mobile communication technologies, combining increased transmission speeds, reduced communication delays, and substantially higher connection capacity. These improvements are achieved through technologies including millimeter-wave communication, dense small-cell deployments, massive MIMO (multiple-input multiple-output), and beamforming techniques. A 5G network can accommodate as many as one million connected devices per square kilometer, achieve peak rates approaching 20 Gbps, and provide latency levels of approximately one millisecond. Compared with 4G, these capabilities can deliver speeds up to 100 times greater, supporting applications such as high-speed data exchange, continuous media streaming, and high-definition video communication. The extremely low latency offered by 5G is particularly important for time-sensitive applications, including autonomous transportation and remote surgical procedures. In addition, its ability to accommodate large numbers of simultaneously connected devices provides critical support for extensive IoT deployments that constitute an important foundation of smart city environments \cite{r36}.
+
+5G infrastructure supplies the low-latency communication and IoT integration platform on which smart city applications are built \cite{r36}, serving as a driver of applications that make city life more efficient, sustainable, and livable, and integrating readily with healthcare, public safety, energy management, and transportation systems.
+
+5G communication is commonly deployed within three principal spectral ranges: low-band frequencies below 1 GHz, mid-band frequencies spanning approximately 1--6 GHz, and high-band spectrum from 24--100 GHz, commonly referred to as millimeter-wave frequencies. The low-frequency range provides broader geographic coverage and stronger signal propagation through buildings, making it appropriate for rural and suburban deployments. Mid-band spectrum provides a balance between coverage and capacity, which makes it suitable for urban environments with moderate to high connectivity requirements. In contrast, high-band 5G can provide exceptionally high throughput and network capacity, although its propagation distance and ability to penetrate physical structures are comparatively limited, restricting its use primarily to densely populated urban locations and specialized high-bandwidth applications \cite{r37}.
+
+Cellular radio access networks employ low-power transmission across relatively limited geographic areas, enabling increased network capacity and making them particularly suitable for densely populated urban environments. Advanced techniques such as MIMO, beamforming, and network slicing play a central role in enhancing the performance and efficiency of intelligent communication networks. Multiple-input multiple-output (MIMO) technology uses several antennas at both the transmitting and receiving ends, allowing multiple data streams to be transmitted and received concurrently. This capability is especially valuable for handling the substantial traffic produced by large-scale IoT deployments and provides communication support for applications such as surveillance systems, intelligent traffic infrastructure, and public Wi-Fi services.
+
+Beamforming, used across MIMO and 5G systems, directs signals toward a specific user or device rather than broadcasting in all directions, reducing interference, ensuring high-speed data transfer, and supporting large numbers of simultaneous IoT connections.
+
+Network slicing constitutes an important capability of 5G infrastructure by partitioning a common physical network into several logically independent virtual networks, with each slice configured to satisfy the requirements of a particular application or service. This approach enables differentiated levels of performance, reliability, and operational efficiency according to application needs. Within smart city environments, a shared physical communication infrastructure can therefore accommodate separate virtual slices dedicated to functions such as intelligent transportation, public safety and emergency response, and automated surveillance. Table~\ref{tab:slicing} presents representative applications of network slicing.
+
+\begin{table}[!t]
+\caption{Use Cases of Network Slicing}
+\label{tab:slicing}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+
+\begin{tabularx}{\linewidth}{|
+>{\raggedright\arraybackslash}p{0.30\linewidth}|
+>{\raggedright\arraybackslash}X|}
+\hline
+
+\textbf{Use Case} & \textbf{Description} \\
+\hline
+
+Smart Transportation &
+Operates with ultra-low latency. Dedicated slice for traffic control and autonomous vehicles, providing the real-time data processing needed to ensure safety and faster transportation. \\
+\hline
+
+Public Safety \& Emergency Services &
+Separate slice for police, fire, and ambulance services. Ensures reliable communication even during network congestion. \\
+\hline
+
+Smart Surveillance &
+High-bandwidth slice for CCTV cameras and AI-based video analytics. Enables real-time monitoring and crime prevention. \\
+\hline
+
+\end{tabularx}
+\end{table}
+
+5G-based mobile broadband provides individuals, enterprises, and public-sector services with high-speed and secure internet connectivity, supporting bandwidth-intensive applications such as ultra-high-definition video, augmented reality, and virtual reality. By enabling these advanced digital services, enhanced mobile connectivity can contribute to improved urban lifestyles. The broader deployment of 5G infrastructure is also anticipated to result in substantial increases in mobile data consumption and overall network capacity \cite{r36}. Another important capability of 5G is Ultra-Reliable Low-Latency Communication (URLLC), which provides the rapid and dependable data exchange required for applications including autonomous vehicles, industrial automation, and remote healthcare. These applications often involve safety- or precision-sensitive operations where minimal delay and highly reliable communication are critical. In particular, the combination of 5G-supported URLLC with enhanced vehicle-to-everything (V2X) communication provides an important technological foundation for safety-critical transportation applications \cite{r36}.
+
+"Massive Machine-Type Communications (mMTC), a further 5G feature, connects several thousand IoT devices in scenarios that demand frequent but low-rate transmissions, and is designed to support extremely large numbers of connected devices, such as smart meters, environmental sensors, and connected streetlights across smart city infrastructure" \cite{r36}.
+
+Overall, the capabilities introduced by 5G are expected to substantially reshape high-speed Internet infrastructure by combining increased data rates, reduced communication delays, and broader device connectivity. These improvements can support diverse applications, including IoT ecosystems, autonomous transportation, and augmented reality. As 5G infrastructure continues to expand, smart cities can increasingly utilize continuous data exchange to support more advanced and responsive urban services. At the same time, expanding digital connectivity to rural areas and communities with limited access remains an important policy objective. Public authorities and private organizations are pursuing measures such as financial subsidies, grant programs, and public--private partnerships to reduce disparities in broadband availability. Emerging solutions, including low-Earth-orbit (LEO) satellite systems, may further extend high-speed Internet access to geographically isolated regions. In the United States, the Rural Digital Opportunity Fund (RDOF) provides substantial financial support for broadband infrastructure deployment in areas that remain without adequate service \cite{r32}.
+
+\subsubsection{5G in Smart Cities}
+Fifth-generation mobile networks underpin smart city development by delivering low latency, ultra-fast speed, and massive connectivity for millions of devices. 5G supports smart transport systems that exchange real-time information among infrastructure, vehicles, and traffic management systems, as depicted in Fig.~\ref{fig:5g-transport}, enabling automated driving, adaptive traffic signals, and flexible route mapping that together lead to the betterment of the flow of traffic and its safety.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.72\linewidth,height=0.5\textheight,keepaspectratio]{image-005.png}
+\caption{5G-enabled Smart Transportation Systems}
+\label{fig:5g-transport}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{image-006.png}
+\caption{5G Enabled Smart Grid}
+\label{fig:5g-connectivity}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{image-007.png}
+\caption{5G-enabled Remote Healthcare}
+\label{fig:5g-v2x}
+\end{figure}
+
+Vehicle-to-everything (V2X) communication enables connected and automated vehicles to exchange information with other vehicles as well as surrounding road infrastructure. The dependable connectivity and minimal communication delays provided by 5G networks are particularly important for facilitating these exchanges, thereby supporting the safe, coordinated, and efficient operation of autonomous vehicles \cite{r43}.
+
+"Smart grids paired with 5G enable real-time monitoring and control of energy systems: smart grid communication technologies support efficient energy distribution, integration of renewable power sources, and rapid response to shifts in demand, making urban energy systems more sustainable and reliable" \cite{r44}. Fig.~\ref{fig:5g-connectivity} illustrates the architecture of a 5G-enabled smart grid.
+
+5G also strengthens public safety by enabling real-time communication and coordination among emergency responders, supporting applications such as remote monitoring, predictive data analysis, and rapid resource mobilization that allow cities to respond to emergencies faster and more effectively. Research on public safety communications shows that "5G capabilities can transform emergency response by giving first responders better situational awareness and coordination \cite{r45}, although deployment remains most demanding in densely populated urban centers and areas with limited existing infrastructure. Fig.~\ref{fig:5g-safety} shows a representative 5G-based emergency-response framework.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{image-008.png}
+\caption{5G for Public Safety and Emergency Response}
+\label{fig:5g-safety}
+\end{figure*}
+
+5G is also transforming healthcare by enabling telemedicine, remote patient monitoring, and more sophisticated medical procedures. High-definition video consultation, real-time transmission of medical data, and remote-assisted procedures together make healthcare services more efficient and more widely accessible, improving patient outcomes as a result. Fig.~\ref{fig:5g-v2x} depicts a representative 5G-enabled remote healthcare workflow.
+
+5G is a similarly important enabler of Industry 4.0 in smart manufacturing, supporting interconnected factories and automated, real-time data analytics that draw on IoT, robotics, and AI to improve production, flexibility, quantity and quality. By enabling live data exchange and automation across the production chain, 5G supports productivity gains in smart manufacturing and industrial automation \cite{r97}. Fig.~\ref{fig:manufacturing} depicts the overall data and material flow in a 5G-enabled smart factory.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{image-009.png}
+\caption{Smart Production and Industry 4.0}
+\label{fig:manufacturing}
+\end{figure}
+
+Large-scale implementation of 5G networks involves considerable investment in supporting infrastructure, including dense small-cell deployments, fiber-optic backhaul systems, and edge-computing resources, as outlined in Table~\ref{tab:5g}. Effective spectrum planning and allocation are also fundamental to successful 5G implementation, with network deployments utilizing a combination of licensed, shared-access, and unlicensed frequency bands \cite{r37}.
+
+\begin{table}[!t]
+\caption{Components of 5G Infrastructure}
+\label{tab:5g}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+
+\begin{tabularx}{\linewidth}{|
+>{\raggedright\arraybackslash}p{0.18\linewidth}|
+>{\raggedright\arraybackslash}X|
+>{\raggedright\arraybackslash}X|
+>{\raggedright\arraybackslash}X|}
+\hline
+
+\textbf{Components} &
+\textbf{Description} &
+\textbf{Role in Smart Applications} &
+\textbf{Real-World Examples} \\
+\hline
+
+IoT Sensors &
+Devices that capture environmental, traffic, and infrastructure data. &
+Enable real-time monitoring of traffic, pollution, and public utilities. &
+Air quality sensor networks in Barcelona. \\
+\hline
+
+Data Centers &
+Facilities for processing, storing, and managing large volumes of urban data. &
+Support data analytics, decision-making, and service delivery. &
+Smart city data hubs in Amsterdam. \\
+\hline
+
+Cloud Computing &
+Scalable computing resources delivered over the internet. &
+Enables large-scale data processing, storage, and smart city applications. &
+Cloud-based urban management platforms in Singapore. \\
+\hline
+
+Urban Platforms &
+Integrated platforms that consolidate data from multiple city departments. &
+Facilitate data sharing, visualization, and coordinated decision-making. &
+Barcelona Urban Platform; FIWARE-based smart city platforms. \\
+\hline
+
+\end{tabularx}
+\end{table}
+
+Digital infrastructure is thus anchored by cloud computing, IoT sensors, and data centers, all of which together allow cities to manage themselves efficiently. Sensors monitor continuous traffic and environmental conditions -- air-quality monitoring in Barcelona is a representative example \cite{r39} -- while data centers provide the storage and analysis capacity needed for large-scale urban data, as illustrated by Amsterdam's smart data hubs \cite{r40}. Cloud computing supplies the internet-based, scalable resources that projects such as Singapore's Smart Nation initiative rely on to aggregate data across the city \cite{r41}, and Virtual Singapore's urban data platform offers centralized, real-time visualization that supports inter-departmental coordination for the benefit of residents \cite{r42}. Together, these digital elements are what make contemporary cities smart and sustainable. Fig.~\ref{fig:strategies} presents key strategies for optimizing digital infrastructure.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\linewidth]{image-010.png}
+\caption{Approaches to Digital Infrastructure Optimization}
+\label{fig:strategies}
+\end{figure}
+
+\subsection{Physical Infrastructure}
+Transforming traditional infrastructure to meet the requirements of smart urban environments involves the incorporation of advanced technological solutions aimed at increasing operational efficiency, supporting environmental sustainability, and improving residents’ quality of life. Such modernization is important for responding effectively to the complex challenges associated with urban development while enabling long-term sustainable growth. This subsection focuses on three major dimensions of infrastructure modernization: intelligent buildings, technologically enhanced roads and highways, and upgraded systems for water and waste management.
+
+\subsubsection{Digitally Enabled Buildings}
+Intelligent buildings incorporate advanced digital technologies to regulate energy use, enhance building operations, and create more comfortable indoor environments for occupants. Automated solutions manage functions such as illumination, heating, ventilation, air conditioning (HVAC), and security, while the integration of IoT technologies, data analytics, and energy management platforms enables more coordinated and efficient building operation. As a result, intelligent buildings represent an important component of sustainable smart city development. Their principal elements include Energy Management Systems (EMS), Building Management Systems (BMS), and environmentally conscious building design.
+
+Energy Optimization Systems track and regulate energy usage in real time, optimizing consumption, minimizing waste, and reducing operational expenses; automated lighting that adjusts to occupancy and available natural light is a representative example of the resulting energy savings.
+
+Building Management Systems integrate a building's various subsystems -- lighting, HVAC, and security -- into a single cohesive platform, enabling efficient management and real-time monitoring that improves both operational efficiency and occupant comfort.
+
+Building Management Systems (BMS) bring multiple building services, including lighting, HVAC, and security infrastructure, together within an integrated control environment. This centralized architecture enables continuous monitoring and coordinated operation of these systems, thereby supporting more efficient building management while enhancing the comfort of occupants.
+
+"The Edge in Amsterdam stands as one of the world's most advanced smart buildings, combining an efficient energy management system, automated lighting, and eco-friendly design; the broader development of smart urbanism in Amsterdam similarly emphasizes sustainable building practices that integrate smart technologies to enhance urban living while reducing environmental impact \cite{r46}. One World Trade Center in New York City incorporates a range of green technologies, including energy-efficient systems and advanced building management strategies aligned with LEED certification principles" \cite{r47}.
+
+The adoption of intelligent building technologies can involve considerable initial capital expenditure. Achieving interoperability among diverse devices and automated systems also requires careful coordination, standardized protocols, and appropriate planning to ensure seamless integration. Furthermore, the continuous generation, collection, and processing of data from building systems introduces potential privacy and cybersecurity risks, making comprehensive data protection and security mechanisms necessary.
+
+\subsubsection{Intelligent Highways and Roads}
+Intelligent road and highway infrastructure incorporates sensing technologies, adaptive signaling mechanisms, and real-time analytical systems to optimize traffic operations, strengthen roadway safety, and alleviate congestion. Roadside sensors and surveillance cameras continuously gather information regarding vehicle flow, travel speeds, and roadway conditions. The collected data can then be analyzed to identify traffic patterns, detect emerging congestion, and automatically adjust signal timings according to prevailing conditions, as illustrated in Fig.~\ref{fig:roads}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{image-014.png}
+\caption{Smart Roads and Highways}
+\label{fig:roads}
+\end{figure}
+
+Traffic management systems that combine real-time information with adaptive control can reduce congestion in urban road networks \cite{r48}. "Smart traffic lights use sensor data to adjust signal timing to current conditions", reducing waiting times and emissions from idling vehicles; research on adaptive traffic signal control confirms that such strategies can reduce both travel times and fuel consumption in congested urban networks \cite{r49}.
+
+Vehicle-to-Infrastructure (V2I) communication enables vehicles to exchange information with roadside sensing devices and traffic signal systems, as illustrated in Fig.~\ref{fig:v2i}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{image-015.png}
+\caption{Vehicle-to-Infrastructure (V2I) Communication}
+\label{fig:v2i}
+\end{figure}
+
+"This technology supports applications such as traffic signal priority, collision avoidance, and real-time route adjustment; V2I communication enhances both safety and efficiency and has the potential to reduce the number of traffic accidents" \cite{r50}. The Los Angeles Smart Corridor exemplifies an integrated traffic management system that combines real-time signal control and dynamic message displays to coordinate freeway and arterial traffic, reducing congestion and travel delays \cite{r51}, while the Barcelona Smart Traffic Management System combines traffic sensors, intelligent signaling, and data analysis to reduce the congestion and improve the flow of traffic in that city \cite{r52}.
+
+Despite their potential benefits, intelligent road and highway systems present several practical challenges. Deployment often demands substantial initial investment in technological infrastructure, while the extensive acquisition and handling of traffic-related information introduces concerns regarding privacy and data protection. In addition, achieving compatibility between emerging technologies and established traffic management infrastructure can be technically complex.
+
+\subsubsection{Waste and Water Management Systems}
+Intelligent water and waste management solutions integrate sensing devices, analytical techniques, and automated processes to improve the efficiency of water distribution and waste collection while reducing pollution and adverse effects on the environment, as illustrated in Fig.~\ref{fig:water}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{image-016.png}
+\caption{Smart Water and Waste Management Systems}
+\label{fig:water}
+\end{figure}
+
+Smart water meters deliver continuous information on consumption patterns, supporting precise billing, prompt identification of leaks, and more effective allocation of water resources. Investigations into intelligent metering systems indicate that their deployment can lower non-revenue water while enhancing operational performance \cite{r53}. In the waste-management domain, connected sensors installed within collection bins track their filling status and enable collection routes to be planned more efficiently, thereby decreasing unnecessary collection trips, operating expenses, and vehicle-related emissions \cite{r54}. At water treatment facilities, technologies such as membrane-based filtration, ultraviolet (UV) disinfection, and continuous monitoring can be integrated to enhance treated water quality and maintain adherence to safety requirements. Research on advanced treatment methods further demonstrates their ability to improve water quality while lowering the overall cost of treatment \cite{r55}.
+
+"Singapore has implemented a smart water grid that uses sensors and data analytics to manage and monitor water supply, improving efficiency and reducing leakage \cite{r56}, while Rome has installed a smart waste management system that uses sensors to monitor waste levels and optimize collection timing, reducing costs and improving efficiency" \cite{r57}.
+
+The deployment of intelligent water and waste management solutions involves substantial investment in supporting infrastructure. Moreover, obtaining and processing data generated by these systems introduces important privacy and cybersecurity considerations, which need to be incorporated into the modernization of existing infrastructure and services.
+
+\subsection{Urban Design and Planning}
+The incorporation of intelligent technologies into urban planning plays an important role in shaping cities that are efficient, sustainable, and conducive to high-quality living. Contemporary digital solutions enable municipalities to make more effective use of the built environment, enhance residents’ well-being, and address emerging urban challenges. In practical terms, this requires the integration of smart technologies into mixed-use developments, green-space planning, and sustainable approaches to urban development.
+
+\subsubsection{Mixed-Use Developments}
+Smart-enabled mixed-use developments bring residential, professional, commercial, and recreational functions together within a shared urban setting. This integrated arrangement improves access to essential facilities, limits travel requirements, and supports more sustainable patterns of urban living. By combining diverse activities with intelligent technologies, such developments contribute to the convenience, operational efficiency, and quality of life associated with smart urban environments.
+
+These developments incorporate integrated infrastructure, such as intelligent energy networks, advanced transportation systems, and coordinated waste-management facilities, to improve urban efficiency while limiting environmental impacts. Evidence from studies of land-use and transportation patterns indicates that mixed-use planning can reduce commuting distances, thereby helping to alleviate traffic congestion and greenhouse gas emissions \cite{r58}. Within these developments, smart buildings employ automated controls to regulate energy consumption, illumination, and HVAC systems, enhancing occupant comfort while reducing operational expenditure and supporting sustainability objectives. Research examining building energy consumption has shown that such intelligent systems can significantly increase energy efficiency while lowering operating costs \cite{r59}. Mixed-use environments can further incorporate sustainable mobility options, including electric vehicle charging infrastructure, bicycle-sharing services, and integrated public transit facilities, which provide alternatives to private automobile use. Studies of mixed-use development indicate that combining such mobility provisions, particularly public transportation and bicycle-sharing, can reduce dependence on personal vehicles \cite{r60}.
+
+"Hudson Yards in New York implemented a large-scale mixed-use project that combines modern building management systems, energy-saving infrastructure, and smart mobility, transforming the neighborhood into a modern urban district with reduced commuting requirements" \cite{r61}. Marina Bay Sands in Singapore similarly combines residential, commercial, and entertainment functions within a development built around energy-efficient infrastructure, intelligent transport solutions, and integrated infrastructure that together improve urban life and sustainability \cite{r62}. Table~\ref{tab:mixed} summarizes key findings on mixed-use development across countries.
+
+\begin{table*}[!t]
+\caption{Key Findings of Mixed-Use Developments in Various Countries}
+\label{tab:mixed}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+
+\begin{adjustbox}{width=\textwidth}
+\begin{tabularx}{\textwidth}{|
+>{\centering\arraybackslash}p{0.05\textwidth}|
+>{\raggedright\arraybackslash}X|
+>{\raggedright\arraybackslash}X|
+>{\raggedright\arraybackslash}X|
+>{\raggedright\arraybackslash}X|
+>{\raggedright\arraybackslash}X|
+>{\raggedright\arraybackslash}X|}
+\hline
+
+\textbf{Ref} &
+\textbf{Study Area / Country} &
+\textbf{Type of Development} &
+\textbf{Key Components} &
+\textbf{Smart Technologies Used} &
+\textbf{Key Findings} &
+\textbf{Limitations} \\
+\hline
+
+{[73]} &
+Global &
+Mixed-use urban developments &
+Residential, commercial, public spaces &
+Smart infrastructure, energy systems &
+Improves sustainability, economic activity &
+Lacks real-time implementation data \\
+\hline
+
+{[74]} &
+Europe &
+Mixed-use projects &
+Housing, offices, retail &
+Urban planning tools &
+Enhances social interaction, land efficiency &
+Policy complexity \\
+\hline
+
+{[75]} &
+Asia / Global &
+Urban megaprojects &
+Multi-functional urban zones &
+Smart planning frameworks &
+Large-scale mixed-use improves urban efficiency &
+High cost, long timelines \\
+\hline
+
+{[76]} &
+Global &
+Smart city development &
+Integrated urban systems &
+IoT, data analytics, cloud &
+Sustainability + smart governance &
+Data privacy concerns \\
+\hline
+
+{[77]} &
+Global &
+Smart sustainable cities &
+Infrastructure + services &
+IoT, AI, big data &
+Improves resource optimization &
+Implementation complexity \\
+\hline
+
+{[78]} &
+Global &
+Research trends &
+Urban systems &
+Digital technologies &
+Growing focus on sustainability \& mixed-use &
+Limited empirical validation \\
+\hline
+
+{[79]} &
+Europe &
+Smart construction &
+Real estate + infrastructure &
+Industry 4.0, IoT &
+Smart construction supports mixed-use growth &
+Technology adoption barriers \\
+\hline
+
+{[80]} &
+Middle East &
+Smart housing &
+Residential + community services &
+Smart home tech, energy systems &
+Enhances quality of life &
+Cost constraints \\
+\hline
+
+{[81]} &
+Global &
+Smart city frameworks &
+Urban planning systems &
+ICT, governance platforms &
+Mixed-use is core to smart urbanism &
+Conceptual focus \\
+\hline
+
+{[82]} &
+Global &
+Compact urbanism &
+Dense mixed land use &
+Data-driven planning &
+Supports sustainability \& mobility &
+Limited case-specific analysis \\
+\hline
+
+\end{tabularx}
+\end{adjustbox}
+\end{table*}
+
+Mixed-use development is not without its limitations, including land-use conflicts, economic uncertainty, and the complexity of managing multiple functions within a single project. The up-front cost of smart technologies and mixed-use planning is substantial, and developers and municipalities must navigate complex zoning rules and approval processes that can slow project timelines.
+
+\subsubsection{Green Infrastructure and Sustainable Urban Development}
+Green spaces are core component of sustainable metropolitan design, improving livability and environmental quality by reducing pollution, regulating temperature, and supporting biodiversity in rapidly developing cities. Integrating green corridors, parks, and urban forests supports both human well-being and ecological balance, contributing to healthier, smarter, and more resilient urban environments that use resources efficiently while preserving natural systems, improving air quality, mitigating urban heat islands, and offering residents recreational space. Research confirms that urban greening helps regulate urban temperatures and reduce stormwater runoff \cite{r63}. This design philosophy also emphasizes renewable resources, waste reduction, and green construction, incorporating principles such as rainwater collection, passive solar design, and renewable energy use.
+
+% Plot
+\begin{figure*}[!t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=\textwidth,
+    height=7cm,
+    xlabel={Year},
+    ylabel={Revenue (Billion USD)},
+    xmin=2018,
+    xmax=2029,
+    ymin=0,
+    ymax=125,
+    xtick={2018,2019,2020,2021,2022,2023,2024,2025,2026,2027,2028,2029},
+    xticklabel style={rotate=45, anchor=east},
+    ytick={0,20,40,60,80,100,120},
+    grid=major,
+    grid style={dashed,gray!30},
+    line width=1pt,
+    mark size=2.5pt,
+    enlargelimits=false,
+    legend style={
+        at={(0.5,-0.25)},
+        anchor=north,
+        draw=none
+    }
+]
+
+\addplot[
+    blue,
+    thick,
+    mark=*,
+    mark options={fill=blue}
+] coordinates {
+    (2018,32.81)
+    (2019,38.99)
+    (2020,42.02)
+    (2021,49.22)
+    (2022,54.9)
+    (2023,67.18)
+    (2024,72.52)
+    (2025,79.94)
+    (2026,88.11)
+    (2027,96.75)
+    (2028,106.3)
+    (2029,115.3)
+};
+
+\addlegendentry{Smart City Revenue}
+
+\end{axis}
+\end{tikzpicture}
+
+\caption{Revenue for Smart Cities from 2018 to 2029.}
+\label{fig:smartcityrevenue}
+
+\end{figure*}
+
+The building sector and wider built environment contribute substantially to worldwide energy consumption and greenhouse gas emissions, making improved architectural and urban design an important means of reducing these impacts \cite{r64}. At the same time, exposure to green spaces can provide significant health benefits by supporting psychological well-being, alleviating stress, and encouraging regular physical activity. Research has also linked access to such environments with fewer symptoms associated with anxiety and depression \cite{r65}.
+
+The High Line, an elevated linear park built through a former industrial corridor in New York City, illustrates how green infrastructure can improve urban appearance, provide recreational space, and stimulate local economic growth \cite{r66}. The Vauban district in Freiburg, Germany, integrates car-free transit, green space, and low-energy buildings into a coherent sustainable urban district \cite{r67}. The long-term success of such projects depends on developing green spaces and environmentally friendly buildings capable of withstanding both regional climate conditions and the broader pressures of global warming. Tables~\ref{tab:mixed} and~\ref{tab:revenue} together illustrate the economic and environmental influence of these policies.
+
+\section{Technological Innovation in Smart Urban Environments}
+Rapid population growth continues to drive demand for better infrastructure, resource management, and sustainability, and latest technology -- artificial intelligence, the IoT, big data , and cloud processing -- are central to making cities more efficient, responsive, and sustainable in response. These technologies support the collection and interpretation of continuous information and the decision-making that follows, improving sectors as varied as healthcare, transportation, energy, and public safety. This section examines how innovation and technology are set to reshape the future of urban life.
+
+The scale at which these technologies can gather, analyze, and act on data improves decision-making, trend forecasting, and overall urban functionality across public safety, transportation, and city management. Innovation within smart cities extends beyond the direct deployment of emerging technologies and involves transforming traditional infrastructure and public services through more intelligent approaches. Examples include optimized energy distribution through smart grids, waste-management solutions designed to increase recycling, and intelligent transportation systems that help manage and reduce urban congestion. In addition, digital platforms for citizen engagement enable residents to communicate with municipal authorities in real time, provide feedback, and contribute to public decision-making. Such participatory mechanisms can strengthen community involvement while helping ensure that smart city initiatives incorporate the requirements and preferences of the populations they serve. Technological innovation also drives economic development in smart cities by attracting capital, creating jobs, and enabling new industries, even as the broader focus on efficiency, sustainability, and resilience must contend with global challenges of social inequality, climate change, and resource depletion.
+
+\subsection{Information and Communication Technology}
+
+ICT lies an important part of smart city operations, allowing data to be collected, processed, and delivered efficiently to improve city management and decision-making. Barcelona has been a leader in integrating ICT into its smart urban programs, deploying a comprehensive urban platform that combines data sources ranging from social media to sensor networks to track and provide urban services such as collection of waste, traffic management, and energy consumption tracking. This integration has produced significant reductions in energy and water use and helped position Barcelona at the prominent of smart city innovation internationally \cite{r68}.
+
+\subsection{Smart City Systems}
+The Internet of Things (IoT) consists of interconnected sensors and devices that acquire and communicate information concerning urban conditions, including traffic behavior, atmospheric quality, and patterns of energy consumption. By supporting continuous monitoring and infrastructure management, IoT enables municipal authorities to identify developing problems promptly, respond to changing conditions, and allocate available resources more effectively.
+
+IoT-based dimming systems illustrate this potential by transforming conventional lighting into a smart, adaptive, and energy-efficient system. By integrating sensors, controllers, and cloud intelligence, such lighting responds to real-world conditions, substantially reducing energy consumption while improving user comfort. Fig.~\ref{fig:iot-dimming} shows a representative IoT-based smart lighting architecture.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{image-011.png}
+\caption{IoT-based Smart Lighting (Dimming) System}
+\label{fig:iot-dimming}
+\end{figure}
+
+Singapore's Smart Nation initiative provides a practical example of smart city implementation, where IoT technologies are employed to monitor and manage urban infrastructure more effectively. One significant application is the deployment of a nationwide sensor network that monitors traffic conditions and waste-bin fill levels throughout the city, generating information that can support urban planning and municipal service provision. In parallel, AI-driven traffic management approaches have been proposed and tested as a means of addressing congestion across Singapore's road network \cite{r69}.
+
+Big Data Analytics has emerged as a key technology enabling cities to derive meaningful insight from the large volumes of data generated across sectors, processing and analyzing this data to identify trends, patterns, and other perspectives that enhance urban services and inform decision-making. Applications range from emergency response and energy distribution to traffic forecasting, and officials increasingly base predictions and decisions on data drawn from social media, sensors, and municipal databases.
+
+Municipalities across the world are increasingly adopting Big Data Analytics to strengthen infrastructure management, healthcare services, and urban planning. In New York City, these analytical capabilities have been applied to improve the performance of municipal agencies and support public safety initiatives. The city's Domain Awareness System combines information from sources such as social media platforms, law-enforcement databases, and CCTV networks to facilitate real-time monitoring and incident response \cite{r18}. Big data techniques have also been utilized in municipal waste-management operations to improve collection efficiency and increase recycling performance \cite{r70}.
+
+AI builds upon the capabilities of IoT and Big Data Analytics by converting the extensive information generated by connected urban systems into useful insights for decision-making. AI-enabled solutions facilitate continuous observation, forecasting, and automated operations, thereby enhancing the efficiency and sustainability of smart governance, mobility, environmental management, healthcare, economic activity, and everyday urban living. Global case studies demonstrate the deployment of AI across these areas through approaches including machine learning, deep learning, and computer vision, which are now increasingly integrated into smart city applications. This widespread adoption indicates that AI serves not merely as an application for a specific function but as an overarching technology that connects multiple components of smart urban ecosystems. However, its implementation also introduces challenges involving data privacy, infrastructure expenditure, and the establishment of common standards \cite{r6}.
+
+Hangzhou, China, where Alibaba is headquartered, has deployed an AI-enabled "City Brain" system for managing urban infrastructure. The platform processes information collected from more than 1,000 cameras and sensors distributed throughout the city. The result has been optimized traffic flow, reduced congestion, faster emergency response, and improved public safety \cite{r71}.
+
+Blockchain technology offers a secure, decentralized platform for managing data transparently and without intermediaries, and has become an important part of smart city infrastructure by enhancing data security, trust, and coordination among stakeholders -- governments, developers, and citizens alike \cite{r92,r93}. Blockchain is also compatible with the Internet of Things, ensuring secure communication and rapid data exchange across city-level infrastructure \cite{r94}. In mixed-use developments, blockchain can improve operational efficiency through smart contracts, secure property transactions, and energy management systems \cite{r95,r97}, although high implementation costs, scaling challenges, and regulatory uncertainty continue to limit its adoption in large-scale smart city projects \cite{r97,r96}.
+
+Dubai has announced a strategy to become a fully blockchain-based government and has already deployed the technology across sectors including healthcare, transportation, and real estate. The Dubai Land Department, for instance, uses blockchain to expedite real estate transactions, cutting the time needed to close a deal from weeks to a few hours, while blockchain has also improved "the transparency and security of the city's digital identity management system" \cite{r72}.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.8\textwidth]{image-012.png}
+\caption{Investments in Smart City}
+\label{fig:investments}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.8\textwidth]{image-013.png}
+\caption{Projected Growth of Smart City}
+\label{fig:growth}
+\end{figure*}
+
+Smart governance refers to the use of technology to improve government operations, and reflects how inclusive, effective, transparent, and participatory a smart city's decision-making processes are. Digital platforms and resources allow governments to broaden citizen participation, streamline administrative processes, and deliver services more effectively, encompassing activities such as digitizing public services, using data analytics to inform policy decisions, and integrating citizen feedback into governance.
+
+Authorities routinely draw on live data from multiple sources to handle resources, evaluate municipal infrastructure, and tackle emerging problems, while smart governance further promotes transparency by making government data publicly available and allowing citizens to track program progress -- an openness that builds trust between citizens and government by creating a genuinely participatory governance process.
+
+Seoul, South Korea, has integrated technology across every facet of its city management through a smart governance system that offers more than 1,000 datasets on its Open Data Plaza, allowing citizens to track government activity and engage in policy discussion. Seoul residents can also vote directly on municipal issues through the mVoting smartphone application; together, these initiatives have driven public participation in governance activities above 50 percent \cite{r99,r34}.
+
+E-government services use digital platforms to provide residents with access to public services, while reducing administrative complexity, expanding accessibility, and enabling faster service delivery. By digitizing government functions, smart cities give citizens an easier, more efficient way to engage with government entities, whether through online tax filing, permit applications, or requests for social services. This transition saves time for both citizens and government workers by eliminating the need for in-person office visits, while also ensuring that residents in rural or underserved areas -- and citizens generally, given round-the-clock access -- can obtain the services they need with greater freedom and convenience \cite{r73,r100}.
+
+Estonia, widely regarded as the most technologically advanced e-government in the world, exemplifies this model. Through the e-Estonia project, residents can use multiple services such as voting and tax forms entirely online, and nearly all public services can be completed digitally, saving the government money while giving residents faster, more effective access to public services \cite{r74,r101}.
+
+Citizen participation platforms represent another category of digital technology that enables residents to collaborate with local governments, raise concerns, and take part in decision-making. By enabling residents to contribute to urban governance, digital participation platforms—including social media channels, mobile applications, and web-based discussion forums—can help align planning decisions with community priorities and expectations. These tools establish direct, two-way interaction between citizens and government authorities, allowing public concerns to be communicated, recognized, and incorporated into municipal decision-making.
+
+Better Reykjavik represents a prominent example of digital citizen engagement in urban governance. Introduced in 2010, the platform enables residents to submit proposals, discuss potential improvements, and vote on ideas concerning the city. Proposals receiving substantial public support are subsequently evaluated by the municipal council and implemented when considered feasible. By 2023, the platform had attracted registration from over 75\% of Reykjavik's population, while more than 800 initiatives originating from citizens had been put into practice. This participatory model has contributed to greater transparency and increased public trust in municipal administration \cite{r75,r102}.
+
+Smart mobility integrates advanced digital technologies and innovative transportation solutions into urban mobility networks to establish transportation systems that are efficient, seamless, and environmentally sustainable. Through applications such as autonomous vehicles, intelligent public transit, and shared mobility services, these systems seek to alleviate congestion, limit environmental impacts, and improve the overall travel experience. As a fundamental element of smart urban development, smart mobility also contributes to economic activity, pollution reduction, and enhanced quality of life.
+
+Autonomous vehicles (AVs) are self-operating transportation systems that combine sophisticated sensors, artificial intelligence, and communication technologies to navigate urban roads with limited or no direct human control. Within smart cities, their deployment is intended to alleviate traffic congestion, reduce the occurrence of road accidents, and improve the utilization of available road infrastructure. AVs communicate with nearby vehicles, adaptive traffic signals, and centralized urban systems, enabling them to process real-time information, identify suitable routes, coordinate vehicle movement, and respond dynamically to changing traffic conditions. By reducing reliance on human driving decisions, these systems can address a major source of roadway accidents while maintaining appropriate vehicle spacing and reacting rapidly to unexpected obstacles. Furthermore, autonomous vehicles can be incorporated into public transportation networks and shared mobility services, providing additional opportunities to improve the efficiency and coordination of urban transport systems.
+
+Phoenix, Arizona, has emerged as a significant location for autonomous vehicle trials in the United States. Waymo, a subsidiary of Alphabet Inc., has operated self-driving vehicles in the city since 2017, relying on technologies such as lidar, radar, and camera-based sensing for autonomous navigation. The deployment has produced encouraging outcomes regarding traffic safety and mobility, with analyses of Waymo's operations indicating that its autonomous vehicles have accumulated tens of millions of miles on public roads while recording lower crash rates than comparable human-operated vehicles \cite{r76,r103}.
+
+Smart public transportation systems combine real-time information, IoT-based sensing, and advanced analytical methods to improve the operation of urban transit networks. Commuters can access live information on buses, trains, and other modes of transportation, including expected arrival times, route details, and service notifications through mobile applications and digital information displays. Such timely information can reduce passenger waiting periods, improve network accessibility, and increase the dependability of transit services. At the operational level, data analytics enables transportation agencies to anticipate passenger demand, refine timetables, and control operating expenses. By examining passenger movement patterns, cities can modify routes and service frequencies according to actual demand, allowing transportation resources to be utilized more effectively while minimizing delays and improving the overall passenger experience.
+
+Transport for London (TfL) has developed an advanced public transportation network that incorporates real-time data to coordinate its extensive bus, rail, and tram services. Through the Countdown system, passengers can obtain live bus arrival information at physical stops and through online platforms, enabling more effective journey planning. TfL also applies data-driven analysis to refine bus timetables and strengthen the reliability and quality of its services. In addition, smart fare technologies such as the Oyster card and contactless payment have simplified access to public transportation and made travel across London more convenient \cite{r77,r104}.
+
+Shared mobility encompasses services such as car-sharing, bicycle-sharing, and ride-hailing, providing urban populations with flexible alternatives to private vehicle ownership. By enabling multiple users to share transportation resources, these services can decrease the number of privately owned vehicles operating on roads, helping to alleviate congestion while supporting more sustainable mobility practices. They are also commonly connected with public transportation networks, contributing to integrated multimodal travel systems \cite{r11}. Car-sharing platforms such as Zipcar and Turo enable users to access vehicles for short-duration journeys without owning a car. Similarly, bicycle-sharing services such as Citi Bike in New York and Mobike in China provide convenient access to bicycles and encourage lower-emission forms of transportation. Ride-hailing platforms such as Uber and Lyft provide on-demand transportation, offering users an alternative that can be more convenient and cost-effective than conventional taxi services.
+
+Copenhagen has established itself as an early adopter of shared mobility, with a strong focus on environmentally sustainable transportation. Its Bycyklen bicycle-sharing application provides GPS-equipped electric bicycles fitted with smart locking mechanisms, allowing users to locate and access bicycles conveniently. The service has achieved widespread adoption and now supports millions of trips annually. The city has also connected car-sharing services with its public transportation network, providing residents and visitors with additional flexible mobility options. This emphasis on shared transportation has contributed to efforts to lower CO$_2$ emissions and alleviate road congestion, aligning with Copenhagen's objective of becoming carbon neutral by 2025 \cite{r78,r105}.
+
+Smart energy systems play a vital role in developing sustainable smart cities by enabling the efficient, intelligent use of energy resources, reducing environmental impact, enhancing reliability, and supporting economic growth. These systems draw on advanced technologies to optimize energy distribution, integrate renewable energy sources, and implement energy storage solutions that balance supply and demand, helping cities reduce their carbon footprint, improve energy efficiency, and provide a consistent energy supply to public and commercial sectors alike.
+
+Smart grids are advanced electricity distribution networks that employ digital communication technologies to continuously monitor and coordinate power transmission between generation sources and end users. In contrast to traditional grids, which generally operate through one-directional communication, smart grids facilitate bidirectional information exchange, allowing electricity distribution to be managed more efficiently while improving load balancing and enabling quicker responses to service interruptions. Advanced sensors, smart meters, and automated control mechanisms provide continuous information regarding electricity consumption and distribution, which can be used to optimize power delivery, reduce transmission losses, and manage variations in demand. Smart grids also facilitate the incorporation of renewable energy resources by dynamically coordinating electricity flows according to changes in generation and consumption, thereby reducing dependence on fossil-fuel-based backup generation.
+
+Amsterdam provides an example of smart grid adoption through the "Amsterdam Smart City" pilot project. The initiative connects residential users, businesses, and renewable generation sources, including rooftop solar installations, to enable real-time observation of household energy consumption. Participating households can respond to pricing signals and energy availability by modifying their consumption patterns. The pilot has demonstrated reductions in energy use while providing a pathway toward increased integration of renewable energy throughout the city \cite{r79,r106}.
+
+The incorporation of renewable energy sources, including solar, wind, and hydroelectric power, into smart city energy networks is essential for lowering greenhouse gas emissions and promoting long-term sustainability. However, fluctuations in renewable generation caused by changing weather conditions create challenges for their effective integration with smart grids. Cities can address these variations through advanced generation forecasting, energy management systems, and adaptable grid infrastructure that facilitate efficient utilization of renewable resources. Smart grids further support this process by dynamically distributing available electricity according to demand and directing excess generation toward storage for subsequent use.
+
+Freiburg, Germany, widely recognized as the "Solar City" provides an example of renewable energy integration at the urban scale. The city generates a significant portion of its electricity through rooftop solar installations, including those located on government buildings, while its energy infrastructure is designed to respond dynamically to variations in solar availability. Freiburg's long-standing focus on renewable energy has contributed to its recognition as one of Europe's more sustainable urban environments \cite{r80,r107}.
+
+The Tesla Powerpack installation at Hornsdale, South Australia, ranks among the largest battery energy storage systems in the world, built to address energy supply challenges and support more effective integration of renewable energy into the South Australian grid. By storing surplus wind farm energy and releasing it during peak hours, the system helps avoid blackouts and grid imbalances caused by fluctuating renewable supply, and has demonstrated the feasibility of large-scale energy storage as an enabler of renewable energy integration \cite{r81,r108}.
+
+\section{Connecting Smart Cities Worldwide}
+Connecting smart cities worldwide is of core importance: as cities require more amounts of embedded systems for data, connectivity, and automation into their infrastructure and services, establishing universal standards and cross-border cooperation becomes essential to linking these urban centers together in pursuit of greater efficiency, sustainability, and resident well-being.
+
+International partnerships and alliances have formed to promote innovation, guarantee compatibility, and share proven strategies, and examples from Singapore to New York illustrate how these connected urban ecosystems use technology to solve pressing challenges, improve daily life, and stimulate economic growth. This section explores how smart cities are interconnected at a global level -- an interconnectedness that enables seamless collaboration, knowledge sharing, and coordinated development across regions -- focusing on the standards, collaborative efforts, and initiatives that make this integration possible.
+
+\subsection{Global Standards and Interoperability}
+The interoperability of technologies deployed across smart cities worldwide depends on universal standards, which make cooperation between municipalities substantially more efficient. Fig.~\ref{tab:smartstandards} illustrates the global standardization landscape.
+
+\begin{table*}[!t]
+\caption{Global Standards and Interoperability for Smart Cities}
+\label{tab:smartstandards}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+
+\begin{tabularx}{\textwidth}{|l|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Standard/Framework} &
+\textbf{Description} &
+\textbf{Application in Smart Cities} &
+\textbf{Participating Cities/Regions} \\
+\hline
+
+ISO 37120 &
+Standard for assessing urban performance indicators &
+Provides reference measures for evaluating smart city performance &
+Global \\
+\hline
+
+IEEE Smart City Standards &
+Recommendations for interoperability among IoT devices &
+Enables coordinated integration of connected urban IoT devices &
+Cities across the US and Europe \\
+\hline
+
+oneM2M &
+Architecture for IoT and machine-to-machine (M2M) communication &
+Facilitates interoperability between devices operating across different platforms &
+Smart cities in Asia and Europe \\
+\hline
+
+ITU U4SSC &
+Performance indicators for smart and sustainable urban development &
+Helps synchronize city infrastructure with sustainability objectives &
+More than 90 countries \\
+\hline
+
+\end{tabularx}
+\end{table*}
+
+The International Organization for Standardization (ISO) develop major standards in this space, including ISO 37120 on urban performance and ISO 37122 on smart city indicators, while IEEE and oneM2M frameworks define critical interoperability standards for IoT systems \cite{r82}. These standards allow disparate technologies -- from transit networks to public health platforms -- to work together, letting cities deploy new solutions with minimal overhaul; adopting common standards and benchmarking frameworks in this way facilitates collaboration and knowledge sharing between municipalities \cite{r83}.
+
+\subsection{International Partnerships and Collaborations}
+"Smart cities depend on international collaboration to share best practices, pool resources, and disseminate effective solutions. The Global Smart City Partnership Program (GSCP), supported by organizations including the World Bank and UN-Habitat, facilitates the global sharing of innovative frameworks and enables knowledge exchange on topics such as digital governance and urban mobility" \cite{r94}; such collaborative measures accelerate urban innovation while reducing operational costs through shared global resources \cite{r86}.
+
+International initiatives such as the United for Smart Sustainable Cities (U4SSC) program, coordinated by the International Telecommunication Union, similarly aim to develop a singular approach for urban areas improving their technical environments, driving the creation of common indicators and standards for smart sustainable development \cite{r83,r85}. Such initiatives allow cities to align their growth with global sustainability and technological goals in ways that remain scalable over the long term.
+
+International city networks, including C40 Cities and the Global Covenant of Mayors, provide platforms through which municipalities collaborate on pressing global concerns such as climate change and sustainable development. C40 Cities brings together almost 100 large urban centers that coordinate climate-related strategies and actions, while the Global Covenant of Mayors connects more than 10,000 cities through initiatives focused on climate and energy. These collaborative networks support the exchange of knowledge, coordinated planning, and the development of shared policy approaches, enabling participating cities to respond more effectively to challenges that extend across national and municipal boundaries \cite{r86,r109}.
+
+The experiences of Dubai, Barcelona, Singapore, and New York demonstrate the outcomes that can emerge from coordinated smart city development. Singapore's Smart Nation initiative demonstrates large-scale integration of urban technologies, incorporating IoT, AI, and big data across transportation, healthcare, and public administration. IoT infrastructure operated by both public and private organizations is interconnected across the city to improve the delivery and efficiency of public services \cite{r87,r110}. The Virtual Singapore digital model additionally provides a real-time environment in which environmental, demographic, and infrastructure information can be integrated to support more informed urban management.
+
+Barcelona has likewise pursued technology-oriented urban planning and intelligent transportation solutions, supported by an extensive sensor network that monitors parameters such as air quality, energy consumption, and traffic conditions. Initiatives including electric bicycle-sharing and smart parking have contributed to improved mobility and reduced congestion \cite{r88,r111,r35}, supporting Barcelona's position among Europe's sustainable and livable urban environments.
+
+Dubai provides another example of technology-driven urban transformation, with its smart city strategy emphasizing blockchain and artificial intelligence to improve administrative efficiency and transparency. A wide range of government services has been digitized using blockchain technologies, reducing dependence on physical documentation and expediting service delivery. AI-based applications have also been used to improve administrative processes and reduce associated costs, contributing to Dubai's development as a prominent example of smart governance \cite{r89,r112}.
+
+New York City has developed its smart city efforts around sustainability and urban resilience, applying technological solutions to challenges involving climate change, public health, and emergency preparedness. Its resilience initiatives include real-time crisis management systems designed to provide authorities with timely information and enable faster, more coordinated responses to emergencies \cite{r90,r113}.
+
+\section{SDGs and Global Smart City Initiatives}
+Smart city development is closely aligned with the UN's SDGs, particularly SDG 11, which focuses on sustainable and inclusive cities. These goals promote efficient resource use, reduce the environmental influence, and improved urban well-being through smart technologies, and countries around the world are integrating SDG targets directly into their urban planning and governance frameworks. India's Smart Cities Mission, for example, emphasizes sustainable infrastructure, digital governance, and citizen-centric services, while similar initiatives in Singapore and the European Union focus on green mobility, energy efficiency, and data-driven urban management.
+
+\subsection{Role of SDGs in Smart Cities}
+Accelerating urbanization worldwide is generating both significant challenges and new possibilities for advancing sustainable development. Although cities continue to serve as major centers of economic activity and technological innovation, they are increasingly confronted with issues such as climate change, intensive resource use, social disparities, and environmental deterioration. The United Nations 2030 Agenda for Sustainable Development highlights the importance of addressing these urban challenges, particularly through SDG 11, which aims to ``make cities and human settlements inclusive, safe, resilient, and sustainable.'' This goal emphasizes the fundamental contribution of urban sustainability to the broader pursuit of sustainable development at the global level \cite{r114}.
+
+Understanding how research communities are contributing to SDG 11 and its associated goals requires a multidisciplinary lens, since cities differ widely in their socio-ecological characteristics and the intricate relationships among the environmental, social, and economic dimensions of sustainability demand correspondingly broad analytical approaches \cite{r114}. Recent scholarship suggests that urban sustainability research has moved from a siloed approach toward a more holistic framework that recognizes the interconnection among diverse urban challenges \cite{r115}.
+
+The growing adoption of smart city concepts and technology-oriented policies has introduced additional dimensions to research on urban sustainability \cite{r116}. The integration of digital technologies and data-driven approaches into urban development creates new possibilities for achieving sustainability objectives, while also generating concerns related to equitable access and inclusion \cite{r117}. As a result, several research directions have emerged to investigate how smart city technologies and solutions can simultaneously contribute to the achievement of multiple Sustainable Development Goals.
+
+As research on smart urban development continues to expand, greater emphasis is being placed on the capacity of smart city frameworks to support advancement toward the Sustainable Development Goals (SDGs). In particular, SDG 11 has encouraged a transition toward urban development models that are technology-enabled, data-informed, and centered on human needs. Smart cities are increasingly understood not simply as mechanisms for addressing conventional urban concerns such as transportation, waste management, and energy use, but as broader platforms for achieving sustainability objectives through improved governance, environmental monitoring, and mechanisms for citizen participation. These integrated approaches also incorporate climate mitigation and adaptation measures \cite{r118,r119}, strengthening the contribution of smart city planning to the wider SDG agenda through scalable and flexible urban solutions that overcome the limitations of isolated, sector-specific strategies.
+
+\subsection{Country-Level Smart City Initiatives}
+Governments across different countries are pursuing smart city programs that support objectives related to sustainability and digital transformation \cite{r1,r120}. In India, the Smart Cities Mission seeks to strengthen urban infrastructure, governance mechanisms, and residents' quality of life through data-driven approaches \cite{r2,r121}. Technologies including IoT and AI are incorporated through Integrated Command and Control Centres, enabling continuous monitoring and real-time management of urban services \cite{r3,r122}. In Singapore, the Smart Nation initiative places greater emphasis on digital governance, public participation, and the development of technology-driven urban services \cite{r4,r123}.
+
+The European Union promotes sustainable smart cities through the Horizon Europe program, targeting climate-neutral cities by 2030 \cite{r1,r120}, while global initiatives such as the G20 Smart Cities Alliance focus on developing standards for data governance and ethical technology use in cities \cite{r94}. Countries across Southeast Asia and Africa are similarly adopting smart city frameworks, supported by international organizations, to improve urban resilience and inclusivity \cite{r4,r123}. Together, these initiatives demonstrate the importance of integrating policy, technology, and sustainability in urban development \cite{r1,r120,r4,r123}, even though implementation varies considerably across countries owing to differences in economic capacity, governance structures, and infrastructure readiness \cite{r4,r123}. Overall, global smart city initiatives reflect a strong commitment to sustainable urban development aligned with the SDGs \cite{r1,r114,r120}.
+
+\begin{table*}[!t]
+\caption{Country-Level Smart City Initiatives}
+\label{tab:country}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+
+\begin{tabularx}{\textwidth}{|
+>{\raggedright\arraybackslash}p{0.10\textwidth}|
+>{\raggedright\arraybackslash}X|
+>{\raggedright\arraybackslash}p{0.16\textwidth}|
+>{\raggedright\arraybackslash}p{0.18\textwidth}|
+>{\centering\arraybackslash}p{0.10\textwidth}|
+>{\centering\arraybackslash}p{0.06\textwidth}|}
+\hline
+
+\textbf{Country} &
+\textbf{Initiative} &
+\textbf{Focus Area} &
+\textbf{Key Technologies} &
+\textbf{SDG Link} &
+\textbf{Ref} \\
+\hline
+
+India &
+Smart Cities Mission &
+Urban infrastructure modernization, digital governance, and citizen-centric services &
+IoT, AI, GIS, smart mobility, and integrated command centers &
+SDG 11 &
+[120] \\
+\hline
+
+Singapore &
+Smart Nation Initiative &
+Digital governance, urban mobility, healthcare, and public services &
+AI, Big Data, IoT, cloud computing, and digital identity platforms &
+SDG 9, 11 &
+[121] \\
+\hline
+
+European Union &
+Horizon Europe -- Climate-Neutral and Smart Cities Mission &
+Climate neutrality, sustainable urban development, and energy transition &
+Smart grids, digital twins, renewable energy systems, and IoT &
+SDG 11, 13 &
+[122] \\
+\hline
+
+Global &
+G20 Global Smart Cities Alliance &
+Policy harmonization, urban governance, and international collaboration &
+Data standards, digital governance frameworks, and interoperability platforms &
+SDG 16 &
+[123] \\
+\hline
+
+\end{tabularx}
+\end{table*}
+
+\subsection{Case Studies (India, Singapore, EU, UAE, USA)}
+In India, the Smart Cities Mission demonstrates large-scale urban transformation through area-based development and IoT-enabled governance, as evidenced in cities such as Vadodara and Pune \cite{r122}. Singapore's Smart Nation initiative represents a leading global model, integrating AI, IoT, and national digital platforms to enhance urban services and citizen engagement \cite{r123}.
+
+In the European Union, the Horizon Europe mission promotes climate-neutral cities by 2030 through smart energy systems, mobility solutions, and sustainable infrastructure \cite{r85}. The United Arab Emirates, particularly Dubai and Abu Dhabi, focuses on AI-driven governance, smart mobility, and blockchain-enabled public services as part of its digital transformation strategy \cite{r112}.
+
+In the US, urban areas like New York emphasize resilience planning, smart infrastructure, and data-driven environmental monitoring to address climate risks \cite{r90,r113}. Across these regions, AI, IoT, and big data are widely adopted to increase the urban efficiency and sustainability \cite{r4}, and case studies show that digital platforms and integrated infrastructure are key enablers of real-time decision-making and service delivery \cite{r106}. Implementation strategies nonetheless vary depending on governance models, economic capacity, and technological maturity \cite{r116}: developed regions tend to prioritize sustainability and climate neutrality, whereas developing countries emphasize infrastructure and service accessibility \cite{r101}. Overall, these global case studies show that successful smart city development requires integrating technology, policy frameworks, and sustainability goals \cite{r84}.
+
+\section{Challenges and Prospects for Future Development}
+As smart cities continue to evolve, addressing critical challenges becomes essential to achieving sustainable, inclusive, and  resilient urban environments. Key challenges include privacy and security concerns, the need for inclusive and equitable access, the development of effective regulatory and policy frameworks, and the pursuit of long-term environmental and economic sustainability.
+
+Smart cities offer substantial benefits in efficiency, sustainability, and living standards, but the pace of technological change brings with it problems that must be resolved for these gains to be sustained. Cybersecurity threats and the risk of personal data loss grow more serious as cities become increasingly interdependent, and the challenge of inclusiveness and equity cannot be overlooked, since the digital divide can leave certain groups unable to fully benefit from smart city innovations (Table~\ref{tab:challenges}).
+
+\begin{table}[!t]
+\caption{Smart City Development Challenges}
+\label{tab:challenges}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+
+\begin{tabularx}{\linewidth}{|
+>{\raggedright\arraybackslash}p{0.20\linewidth}|
+>{\raggedright\arraybackslash}X|
+>{\raggedright\arraybackslash}X|
+>{\raggedright\arraybackslash}X|}
+\hline
+
+\textbf{Challenge Area} &
+\textbf{Description} &
+\textbf{Key Solutions/Strategies} &
+\textbf{Notable Case Example} \\
+\hline
+
+Data Privacy &
+Concerns regarding the collection, sharing, and storage of citizens' personal data. &
+Privacy-preserving mechanisms, data anonymization, strong encryption, and cybersecurity frameworks. &
+GDPR implementation across European smart cities. \\
+\hline
+
+Financial Constraints &
+High capital investment and long-term operational costs associated with smart city infrastructure. &
+Public--private partnerships (PPPs), government funding, and international development grants. &
+World Bank Smart City Partnership initiatives. \\
+\hline
+
+Regulatory Issues &
+Rapid technological advancement often outpaces existing legal and regulatory frameworks. &
+Adaptive policies, regulatory sandboxes, and technology-specific governance frameworks. &
+Autonomous vehicle regulations in Arizona, USA. \\
+\hline
+
+Inclusivity and Equity &
+Unequal access to digital infrastructure and smart city services among different population groups. &
+Affordable digital access, digital literacy programs, and inclusive urban planning. &
+``Digital Equity for All'' initiative, New York City. \\
+\hline
+
+\end{tabularx}
+\end{table}
+
+Robust regulatory and policy mechanisms are essential for overseeing emerging technologies while maintaining public confidence, while environmental sustainability remains an important consideration as cities seek to reconcile technological advancement with ecological protection. The long-term capacity of smart cities to develop as resilient, inclusive, and sustainable environments will depend substantially on their ability to address these challenges effectively.
+
+Data privacy and cybersecurity represent major concerns as smart cities collect and process increasingly large quantities of information through IoT devices, sensing technologies, and connected infrastructure. Personal data is often utilized to improve services such as public transportation, waste management, and emergency response, increasing the potential exposure of these systems to cyberattacks. Research examining smart city security indicates that extensive deployment of IoT devices, sensors, and intelligent infrastructure has increased exposure to cybersecurity threats and data breaches \cite{r91}. Protecting personal information presents an additional challenge, particularly within regulatory environments such as the General Data Protection Regulation (GDPR) of the European Union and the California Consumer Privacy Act (CCPA) of the United States. Accordingly, cities need to adopt robust encryption and anonymization techniques together with comprehensive data governance mechanisms to safeguard citizens' privacy rights \cite{r92}.
+
+Inclusivity and equity are similarly major concerns in smart city technology development: the benefits of a smart city -- improved mobility, health, and service delivery -- should be accessible to every citizen regardless of socioeconomic status, yet access to smart city services in developing countries remains uneven owing to digital divides and infrastructure disparities, leaving many urban populations without adequate access \cite{r101}.
+
+Smart cities need appropriate regulatory and policy structures that encourage technological innovation while protecting public interests. The implementation of artificial intelligence-based applications, including autonomous vehicles and drone-based delivery systems, requires well-defined legal provisions to clarify responsibilities, establish accountability, and determine liability in cases involving these technologies.
+
+Governance has become a critical consideration in applying new digital technologies toward smart city goals, since the misuse of technology, threats to citizen privacy, cybersecurity, and the growing role of AI all raise questions of accountability. In response, smart cities are increasingly applying Fourth Industrial Revolution (4IR) tools to address these issues, and policy roadmaps for the responsible governance of smart city technology have been developed to help city leaders address accountability, privacy, cybersecurity, and the responsible use of artificial intelligence \cite{r94,r117}.
+
+Technological development remains a key driver of smart city growth, but it should not force a trade-off between urban growth and environmental sustainability. The combination of IoT and AI instead offers a path to minimizing environmental impact through more effective management of essential city resources -- energy, water, and waste.
+
+Urbanization is progressing rapidly worldwide, resulting in an increasing proportion of the global population residing in urban areas. Although cities serve as major contributors to economic development, accelerated urban growth also generates challenges associated with ageing populations, expansion of urban areas, and inefficient consumption of natural resources. Urban environments already contribute substantially to worldwide energy demand and greenhouse gas emissions, and the absence of effective sustainability measures could lead to severe and potentially irreversible environmental impacts \cite{r119}.
+
+The United Nations' SDG 11 emphasizes the development of cities that are inclusive, resilient, efficient in their use of resources, and environmentally sustainable over the long term. Given the substantial contribution of urban areas to global energy consumption and greenhouse gas emissions, smart city initiatives can support emission reduction by improving the efficiency with which energy and other resources are utilized \cite{r85,r120}.
+
+Smart cities depend on both digital and physical infrastructure for effective development. High-speed internet and technologies such as 5G provide the real-time connectivity and faster services that smart cities require \cite{r97}, while smart energy systems -- including smart grids and renewable energy -- support sustainability and help reduce emissions \cite{r98}. Global standards and interoperability remain important for connecting disparate smart city systems efficiently;  the International Telecommunication Union and the Smart Cities Council support this collaboration and knowledge sharing, and city networks such as "C40 Cities and the Global Covenant of Mayors help cities such as Barcelona and New York develop smart mobility and sustainability strategies" \cite{r86,r94}.
+
+Even so, smart city implementation continues to face significant challenges. Privacy and data security remain major concerns for many citizens \cite{r100}, and issues of inclusivity persist, since not all people have equal access to digital services \cite{r101}. Governments must adopt strong policies that support innovation while protecting the public interest \cite{r30}, and cooperation among governments, industry, and citizens will remain essential to overcoming these challenges and achieving sustainable, efficient smart cities.
+
+\section{Conclusion}
+This review has traced the technological, infrastructural, and policy dimensions that together define the smart city, drawing on evidence from digital and physical infrastructure, innovation and emerging technology, global connectivity, and the integration of smart city development with the United Nations Sustainable Development Goals Across each of these dimensions, a consistent pattern emerges: the IoT, big data analytics, AI, 5G connectivity, and sustainable energy systems are not deployed in isolation but function as an interdependent technological ecosystem, one in which digital infrastructure enables physical infrastructure, physical infrastructure supports urban planning, and all three are increasingly oriented toward measurable sustainability outcomes.
+
+The case studies examined throughout this paper -- from Singapore's Smart Nation initiative and Barcelona's sensor-driven urban platform to Dubai's blockchain-enabled governance and New York City's resilience and public-safety programs -- demonstrate that successful smart city development depends as much on institutional and policy choices as on the underlying technology itself. Cities that pair strong digital and physical infrastructure with clear governance frameworks, sustained investment, and meaningful citizen participation tend to realize the greatest gains in efficiency, sustainability, and quality of life, while cities that neglect any one of these dimensions encounter avoidable setbacks, whether through unresolved interoperability issues, weak public trust, or uneven access to services.
+
+At the same time, this review has highlighted the challenges that remain unresolved as smart cities scale: the growing exposure of interconnected urban systems to cybersecurity threats and data breaches, the persistence of digital divides that leave underserved populations behind, the difficulty of establishing regulatory frameworks that keep pace with emerging technologies such as autonomous vehicles and AI-driven governance, and the ongoing tension between rapid urban growth and long-term environmental sustainability. International standards bodies and city networks -- ISO, IEEE, the Global Covenant of Mayors, the International Telecommunication Union, C40 Cities, and oneM2M among them -- are helping to close these gaps by promoting interoperability, shared best practice, and coordinated climate action, but their effectiveness ultimately depends on sustained political will and cross-sector collaboration.
+
+Overall, the findings examined in this review indicate that the evolution of smart cities will depend not merely on technological innovation, but increasingly on the effectiveness of the governance frameworks established to guide its implementation. Achieving cities that are efficient, sustainable, and inclusive will require continued investment in digital and physical infrastructure, stronger international cooperation and standardization, regulatory frameworks that protect privacy and ensure equitable access, and above all, sustained collaboration among governments, industry, and citizens. As urbanization continues to accelerate worldwide, the lessons drawn from Dubai, Barcelona, Singapore, New York City, and the many urban cities discussed in this review offer a practical roadmap for building urban centres that are sustainable, inclusive, and genuinely resilient for the long term.
+
+\begin{thebibliography}{123}
+
+\bibitem{r1} T. Nam and T. A. Pardo, "Conceptualizing smart city with dimensions of technology, people, and institutions," in \emph{Proc. 12th Annual International Digital Government Research Conference: Digital Government Innovation in Challenging Times}, pp. 282--291, 2011.
+\bibitem{r2} A. Zanella, N. Bui, A. Castellani, L. Vangelista, and M. Zorzi, "Internet of Things for smart cities," \emph{IEEE Internet of Things Journal}, vol. 1, no. 1, pp. 22--32, 2014.
+\bibitem{r3} M. Chen, S. Mao, and Y. Liu, "Big data: A survey," \emph{Mobile Networks and Applications}, vol. 25, no. 1, pp. 1--39, 2020.
+\bibitem{r4} M. Batty, K. W. Axhausen, F. Giannotti, et al., "Smart cities of the future," \emph{The European Physical Journal Special Topics}, vol. 214, no. 1, pp. 481--518, 2012.
+\bibitem{r5} R. Kitchin, "The real-time city? Big data and smart urbanism," \emph{GeoJournal}, vol. 79, no. 1, pp. 1--14, 2014.
+\bibitem{r6} Z. Allam and Z. A. Dhunny, "On big data, artificial intelligence and smart cities," \emph{Cities}, vol. 89, pp. 80--91, 2019.
+\bibitem{r7} M. J. N. Han and M. J. Kim, "A systematic review of smart city research from an urban context perspective," \emph{Cities}, vol. 150, art. 105027, 2024, doi: 10.1016/j.cities.2024.105027.
+\bibitem{r8} V. Albino, U. Berardi, and R. M. Dangelico, "Smart cities: Definitions, dimensions, performance, and initiatives," \emph{Journal of Urban Technology}, vol. 22, no. 1, pp. 3--21, 2015, doi: 10.1080/10630732.2014.942092.
+\bibitem{r9} D. Eckhoff and I. Wagner, "Privacy in the smart city---Applications, technologies, challenges, and solutions," \emph{IEEE Communications Surveys \& Tutorials}, vol. 20, no. 1, pp. 489--516, 2018, doi: 10.1109/COMST.2017.2748998.
+\bibitem{r10} A. Botta, W. de Donato, V. Persico, and A. Pescap\'e, "Integration of cloud computing and Internet of Things: A survey," \emph{Future Generation Computer Systems}, vol. 56, pp. 684--700, 2016, doi: 10.1016/j.future.2015.09.021.
+\bibitem{r11} S. Shaheen, N. Chan, A. Bansal, and A. Cohen, "Shared mobility: Definitions, industry developments, and early understanding," \emph{Transportation Research Record: Journal of the Transportation Research Board}, vol. 2536, no. 1, pp. 26--34, 2016.
+\bibitem{r12} J. Zhang, F.-Y. Wang, K. Wang, W.-H. Lin, X. Xu, and C. Chen, "Data-driven intelligent transportation systems: A survey," \emph{IEEE Transactions on Intelligent Transportation Systems}, vol. 12, no. 4, pp. 1624--1639, 2011, doi: 10.1109/TITS.2011.2158001.
+\bibitem{r13} W. Z. Khan, M. H. U. Rehman, H. M. Zangoti, et al., "Industrial internet of things: Recent advances, enabling technologies, and open challenges," \emph{Computers \& Electrical Engineering}, vol. 81, art. no. 106522, 2021.
+\bibitem{r14} E. E. Joh, "Feeding the machine: Policing, crime data, and algorithms," \emph{William \& Mary Bill of Rights Journal}, vol. 26, no. 2, pp. 287--310, 2017.
+\bibitem{r15} J. Gubbi, R. Buyya, S. Marusic, and M. Palaniswami, "Internet of Things (IoT): A vision, architectural elements, and future directions," \emph{Future Generation Computer Systems}, vol. 29, no. 7, pp. 1645--1660, 2013, doi: 10.1016/j.future.2013.01.010.
+\bibitem{r16} R. Buyya, C. S. Yeo, S. Venugopal, J. Broberg, and I. Brandic, "Cloud computing and emerging IT platforms: Vision, hype, and reality for delivering computing as the 5th utility," \emph{Future Generation Computer Systems}, vol. 25, no. 6, pp. 599--616, 2009, doi: 10.1016/j.future.2008.12.001.
+\bibitem{r17} E. Dizon and B. Pranggono, "Smart streetlights in Smart City: A case study of Sheffield," \emph{Journal of Ambient Intelligence and Humanized Computing}, vol. 13, pp. 2045--2060, 2022, doi: 10.1007/s12652-021-02970-y.
+\bibitem{r18} E. S. Levine, J. Tisch, A. Tasso, and M. Joy, "The New York City Police Department's Domain Awareness System," \emph{Interfaces}, vol. 47, no. 1, pp. 70--84, 2017, doi: 10.1287/inte.2016.0860.
+\bibitem{r19} D. Mariano-Hern\'andez, L. Hern\'andez-Callejo, A. Zorita-Lamadrid, O. Duque-P\'erez, and F. Santos Garc\'ia, "A review of strategies for building energy management system: Model predictive control, demand side management, optimization, and fault detect \& diagnosis," \emph{Journal of Building Engineering}, vol. 33, art. 101692, 2021, doi: 10.1016/j.jobe.2020.101692.
+\bibitem{r20} I. del Portillo, B. G. Cameron, and E. F. Crawley, "A technical comparison of three low earth orbit satellite constellation systems to provide global broadband," \emph{Acta Astronautica}, vol. 159, pp. 123--135, 2019, doi: 10.1016/j.actaastro.2019.03.040.
+\bibitem{r21} Y. Su, Y. Liu, Y. Zhou, J. Yuan, H. Cao, and J. Shi, "Broadband LEO satellite communications: Architectures and key technologies," \emph{IEEE Wireless Communications}, vol. 26, no. 2, pp. 55--61, 2019, doi: 10.1109/MWC.2019.1800299.
+\bibitem{r22} J. G. Andrews, S. Buzzi, W. Choi, S. V. Hanly, A. Lozano, A. C. K. Soong, and J. C. Zhang, "What will 5G be?," \emph{IEEE Journal on Selected Areas in Communications}, vol. 32, no. 6, pp. 1065--1082, 2014, doi: 10.1109/JSAC.2014.2328098.
+\bibitem{r23} M. R. Alam, M. B. I. Reaz, and M. A. M. Ali, "A review of smart homes---past, present, and future," \emph{IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews)}, vol. 42, no. 6, pp. 1190--1203, 2012, doi: 10.1109/TSMCC.2012.2189204.
+\bibitem{r24} D. J. Fagnant and K. Kockelman, "Preparing a nation for autonomous vehicles: opportunities, barriers and policy recommendations," \emph{Transportation Research Part A: Policy and Practice}, vol. 77, pp. 167--181, 2015, doi: 10.1016/j.tra.2015.04.003.
+\bibitem{r25} I. O. Adam and M. D. Alhassan, "The effects of mobile network performance and affordability on e-government development," \emph{Electronic Government, an International Journal}, vol. 19, no. 6, pp. 715--733, 2023, doi: 10.1504/EG.2023.134027.
+\bibitem{r26} S. Dhawan, "Online learning: A panacea in the time of COVID-19 crisis," \emph{Journal of Educational Technology Systems}, vol. 49, no. 1, pp. 5--22, 2020, doi: 10.1177/0047239520934018.
+\bibitem{r27} T. Yigitcanlar and S. H. Lee, "Korean ubiquitous-eco-city: A smart-sustainable urban form or a branding hoax?," \emph{Technological Forecasting and Social Change}, vol. 89, pp. 100--114, 2014, doi: 10.1016/j.techfore.2013.08.034.
+\bibitem{r28} M. Forzati and C. Mattsson, "Twenty years of open fibre network in Stockholm: A socio-economic study," in \emph{Proc. 15th International Conference on Transparent Optical Networks (ICTON)}, 2013, doi: 10.1109/ICTON.2013.6602829.
+\bibitem{r29} N. Czernich, O. Falck, T. Kretschmer, and L. Woessmann, "Broadband infrastructure and economic growth," \emph{The Economic Journal}, vol. 121, no. 552, pp. 505--532, 2011, doi: 10.1111/j.1468-0297.2011.02420.x.
+\bibitem{r30} J. M. Bauer, "Regulation, public policy, and investment in communications infrastructure," \emph{Telecommunications Policy}, vol. 34, no. 1--2, pp. 65--79, 2010, doi: 10.1016/j.telpol.2009.11.011.
+\bibitem{r31} B. E. Whitacre, S. Strover, and R. Gallardo, "How much does broadband infrastructure matter? Decomposing the metro--non-metro adoption gap with the help of the National Broadband Map," \emph{Government Information Quarterly}, vol. 32, no. 3, pp. 261--269, 2015, doi: 10.1016/j.giq.2015.03.002.
+\bibitem{r32} I. J. N\'u\~nez, "Estimating private costs in a descending clock auction: The FCC's rural digital opportunity fund," \emph{Telecommunications Policy}, vol. 49, no. 6, 102975, 2025, doi: 10.1016/j.telpol.2025.102975.
+\bibitem{r33} M. J. R. Heck, J. F. Bauters, M. L. Davenport, J. K. Doylend, S. Jain, G. Kurczveil, S. Srinivasan, Y. Tang, and J. E. Bowers, "Hybrid silicon photonic integrated circuit technology," \emph{IEEE Journal of Selected Topics in Quantum Electronics}, vol. 19, no. 4, 6100117, 2013, doi: 10.1109/JSTQE.2012.2235413.
+\bibitem{r34} "Smart cities as urban innovation: Focusing on the Seoul smart city project," \emph{Journal of Innovation and Knowledge}, vol. 1, no. 1, pp. 1--11, 2016.
+\bibitem{r35} T. Bak$\imath$c$\imath$, E. Almirall, and J. Wareham, "A smart city initiative: The case of Barcelona," \emph{Journal of the Knowledge Economy}, vol. 4, no. 2, pp. 135--148, 2013.
+\bibitem{r36} M. Agiwal, A. Roy, and N. Saxena, "Next generation 5G wireless networks: A comprehensive survey," \emph{IEEE Communications Surveys \& Tutorials}, vol. 18, no. 3, pp. 1617--1655, 2016, doi: 10.1109/COMST.2016.2532458.
+\bibitem{r37} A. Gupta and R. K. Jha, "A survey of 5G network: Architecture and emerging technologies," \emph{IEEE Access}, vol. 3, pp. 1206--1232, 2015, doi: 10.1109/ACCESS.2015.2461602.
+\bibitem{r38} X. Foukas, G. Patounas, A. Elmokashfi, and M. K. Marina, "Network slicing in 5G: Survey and challenges," \emph{IEEE Communications Magazine}, vol. 55, no. 5, pp. 94--100, 2017, doi: 10.1109/MCOM.2017.1600951.
+\bibitem{r39} C. Perera, A. Zaslavsky, P. Christen, and D. Georgakopoulos, "Context-aware computing for the Internet of Things: A survey," \emph{IEEE Communications Surveys \& Tutorials}, vol. 16, no. 1, pp. 414--454, 2014.
+\bibitem{r40} I. A. T. Hashem, I. Yaqoob, N. B. Anuar, et al., "The rise of `big data' on cloud computing: Review and open research issues," \emph{Information Systems}, vol. 47, pp. 98--115, 2015.
+\bibitem{r41} D. C. Marinescu, \emph{Cloud Computing: Theory and Practice}, Elsevier, 2013.
+\bibitem{r42} A. M. Townsend, \emph{Smart Cities: Big Data, Civic Hackers, and the Quest for a New Utopia}, W.W. Norton \& Company, 2013.
+\bibitem{r43} S. Chen, J. Hu, Y. Shi, Y. Peng, J. Fang, R. Zhao, and L. Zhao, "Vehicle-to-everything (V2X) services supported by LTE-based systems and 5G," \emph{IEEE Communications Standards Magazine}, vol. 1, no. 2, pp. 70--76, 2017, doi: 10.1109/MCOMSTD.2017.1700015.
+\bibitem{r44} V. C. G\"ung\"or, D. \c{S}ahin, T. Kocak, S. Erg\"ut, C. Buccella, C. Cecati, and G. P. Hancke, "Smart grid technologies: Communication technologies and standards," \emph{IEEE Transactions on Industrial Informatics}, vol. 7, no. 4, pp. 529--539, 2011, doi: 10.1109/TII.2011.2166794.
+\bibitem{r45} A. Kumbhar, F. Koohifar, I. G\"uven\c{c}, and B. Mueller, "A survey on legacy and emerging technologies for public safety communications," \emph{IEEE Communications Surveys \& Tutorials}, vol. 19, no. 1, pp. 97--124, 2017, doi: 10.1109/COMST.2016.2612223.
+\bibitem{r46} M. Van Ostaijen, S. Van der Graaf, and M. Van Dijk, "Smart sustainable cities: The development of smart urbanism in Amsterdam," \emph{Smart Cities and Regional Development Journal}, vol. 1, no. 1, pp. 54--68, 2016.
+\bibitem{r47} G. Kats, \emph{Greening our built world: Costs, benefits, and strategies}, Island Press, 2010.
+\bibitem{r48} S. Djahel, R. Doolan, G.-M. Muntean, and J. Murphy, "A communications-oriented perspective on traffic management systems for smart cities: Challenges and innovative approaches," \emph{IEEE Communications Surveys \& Tutorials}, vol. 17, no. 1, pp. 125--151, 2015, doi: 10.1109/COMST.2014.2339817.
+\bibitem{r49} M. Papageorgiou, C. Diakaki, V. Dinopoulou, A. Kotsialos, and Y. Wang, "Review of road traffic control strategies," \emph{Proceedings of the IEEE}, vol. 91, no. 12, pp. 2043--2067, 2003, doi: 10.1109/JPROC.2003.819610.
+\bibitem{r50} K. Abboud, H. A. Omar, and W. Zhuang, "Interworking of DSRC and cellular network technologies for V2X communications: A survey," \emph{IEEE Transactions on Vehicular Technology}, vol. 65, no. 12, pp. 9457--9470, 2016, doi: 10.1109/TVT.2016.2591558.
+\bibitem{r51} D. H. Roper and G. Endo, "Advanced traffic management in California," \emph{IEEE Transactions on Vehicular Technology}, vol. 40, no. 1, pp. 96--99, 1991, doi: 10.1109/25.69983.
+\bibitem{r52} N. Ze\c{n}ina, J. Merkurjevs, G. Merkurjeva, and A. Rom\={a}novs, "Intelligent transportation systems for smart cities: Barcelona case study," in \emph{Proc. 2025 Int. Conf. on Intelligent Traffic Management Systems (ITMS)}, 2025, doi: 10.1109/ITMS67030.2025.11236692.
+\bibitem{r53} A. J. Zapata-Sierra, E. M. Salmer\'on-Manzano, A. Alcayde, and F. Manzano-Agugliaro, "The scientific landscape of smart water meters: A comprehensive review," \emph{Water}, vol. 16, no. 1, art. 113, 2024, doi: 10.3390/w16010113.
+\bibitem{r54} T. Anagnostopoulos, A. Zaslavsky, K. Kolomvatsos, A. Medvedev, P. Amirian, J. Morley, and S. Hadjieftymiades, "Challenges and opportunities of waste management in IoT-enabled smart cities: A survey," \emph{IEEE Transactions on Sustainable Computing}, vol. 2, no. 3, pp. 275--289, 2017, doi: 10.1109/TSUSC.2017.2691049.
+\bibitem{r55} M. M. Pendergast and E. M. V. Hoek, "A review of water treatment membrane nanotechnologies," \emph{Energy \& Environmental Science}, vol. 4, no. 6, pp. 1946--1971, 2011, doi: 10.1039/C0EE00541J.
+\bibitem{r56} Public Utilities Board Singapore, "Managing the water distribution network with a Smart Water Grid," \emph{Smart Water}, vol. 1, art. 4, 2016, doi: 10.1186/s40713-016-0004-4.
+\bibitem{r57} I. Sosunova and J. Porras, "IoT-enabled smart waste management systems for smart cities: A systematic review," \emph{IEEE Access}, vol. 10, pp. 73326--73363, 2022, doi: 10.1109/ACCESS.2022.3188308.
+\bibitem{r58} R. Ewing and R. Cervero, "Travel and the built environment: A meta-analysis," \emph{Journal of the American Planning Association}, vol. 76, no. 3, pp. 265--294, 2010, doi: 10.1080/01944361003766766.
+\bibitem{r59} L. P\'erez-Lombard, J. Ortiz, and C. Pout, "A review on buildings energy consumption information," \emph{Energy and Buildings}, vol. 40, no. 3, pp. 394--398, 2008, doi: 10.1016/j.enbuild.2007.03.007.
+\bibitem{r60} R. Cervero, "Mixed land-uses and commuting: Evidence from the American Housing Survey," \emph{Transportation Research Part A: Policy and Practice}, vol. 30, no. 5, pp. 361--377, 1996, doi: 10.1016/0965-8564(95)00033-X.
+\bibitem{r61} R. Fisher, R. Leite, and R. Weber, "Value creation, capture, and destruction: Hudson Yards and the false promise of self-financing mega-projects," \emph{Journal of the American Planning Association}, 2022, doi: 10.1080/01944363.2022.2026808.
+\bibitem{r62} J. Szolomicki and H. Golasz-Szolomicka, "The Marina Bay Sands complex in Singapore: A modern marvel of structure and technology," \emph{IOP Conference Series: Materials Science and Engineering}, vol. 960, art. 022051, 2020, doi: 10.1088/1757-899X/960/2/022051.
+\bibitem{r63} D. E. Bowler, L. Buyung-Ali, T. M. Knight, and A. S. Pullin, "Urban greening to cool towns and cities: A systematic review of the empirical evidence," \emph{Landscape and Urban Planning}, vol. 97, no. 3, pp. 147--155, 2010, doi: 10.1016/j.landurbplan.2010.05.006.
+\bibitem{r64} P. Nejat, F. Jomehzadeh, M. M. Taheri, M. Gohari, and M. Z. A. Majid, "A global review of energy consumption, CO2 emissions and policy in the residential sector (with an overview of the top ten CO2 emitting countries)," \emph{Renewable and Sustainable Energy Reviews}, vol. 43, pp. 843--862, 2015, doi: 10.1016/j.rser.2014.11.066.
+\bibitem{r65} C. Twohig-Bennett and A. Jones, "The health benefits of the great outdoors: A systematic review and meta-analysis of greenspace exposure and health outcomes," \emph{Environmental Research}, vol. 166, pp. 628--637, 2018, doi: 10.1016/j.envres.2018.06.030.
+\bibitem{r66} S. Lang and J. Rothenberg, "Neoliberal urbanism, public space, and the greening of the growth machine: New York City's High Line park," \emph{Environment and Planning A}, vol. 49, no. 8, pp. 1743--1761, 2017, doi: 10.1177/0308518X16677969.
+\bibitem{r67} G. J. Coates, "The sustainable urban district of Vauban in Freiburg, Germany," \emph{International Journal of Sustainable Development and Planning}, vol. 8, no. 4, pp. 265--286, 2013, doi: 10.2495/DNE-V8-N4-265-286.
+\bibitem{r68} I. Capdevila and M. I. Zarlenga, "Smart city or smart citizens? The Barcelona case," \emph{Journal of Strategy and Management}, vol. 8, no. 3, pp. 266--282, 2015, doi: 10.1108/JSMA-03-2015-0030.
+\bibitem{r69} E. Aloupogianni, F. Doctor, C. Karyotis, T. Maniak, R. Tang, and R. Iqbal, "An AI-based digital twin framework for intelligent traffic management in Singapore," in \emph{Proc. 2024 International Conference on Electrical, Computer and Energy Technologies (ICECET)}, Sydney, Australia, 2024, pp. 1--6, doi: 10.1109/ICECET61485.2024.10698642.
+\bibitem{r70} M. A. Hannan, M. A. Al Mamun, A. Hussain, H. Basri, and R. A. Begum, "A review on technologies and their usage in solid waste monitoring and management systems: Issues and challenges," \emph{Waste Management}, vol. 43, pp. 509--523, 2015, doi: 10.1016/j.wasman.2015.05.033.
+\bibitem{r71} J. Zhang, X.-S. Hua, J. Huang, X. Shen, J. Chen, Q. Zhou, Z. Fu, and Y. Zhao, "City brain: Practice of large-scale artificial intelligence in the real world," \emph{IET Smart Cities}, vol. 1, no. 1, pp. 28--37, 2019, doi: 10.1049/iet-smc.2019.0034.
+\bibitem{r72} S. \O{}lnes, J. Ubacht, and M. Janssen, "Blockchain in government: Benefits and implications of distributed ledger technology for information sharing," \emph{Government Information Quarterly}, vol. 34, no. 3, pp. 355--364, 2017, doi: 10.1016/j.giq.2017.09.007.
+\bibitem{r73} Y. Yoo, "Toward Sustainable Governance: Strategic Analysis of the Smart City Seoul Portal in Korea," \emph{Sustainability}, vol. 13, no. 11, art. 5886, 2021, doi: 10.3390/su13115886.
+\bibitem{r74} F. Stephany, "It's not only size that matters: Determinants of Estonia's e-governance success," \emph{Electronic Government, an International Journal}, vol. 16, no. 3, pp. 304--313, 2020, doi: 10.1504/EG.2020.108501.
+\bibitem{r75} D. Lackaff, "Escaping the Middleman Paradox: Better Reykjavik and Open Policy Innovation," \emph{JeDEM - eJournal of eDemocracy and Open Government}, vol. 7, no. 2, pp. 137--161, 2015, doi: 10.29379/jedem.v7i2.386.
+\bibitem{r76} K. D. Kusano, J. M. Scanlon, Y.-H. Chen, T. L. McMurry, T. Gode, and T. Victor, "Comparison of Waymo Rider-Only crash rates by crash type to human benchmarks at 56.7 million miles," \emph{Traffic Injury Prevention}, vol. 26, no. sup1, pp. S8--S20, 2025, doi: 10.1080/15389588.2025.2499887.
+\bibitem{r77} A. Wong and N. B. Hounsell, "Using the iBus System to provide improved public transport information and applications for London," in \emph{Proc. 12th World Conference on Transport Research (WCTR)}, Lisbon, Portugal, 2010.
+\bibitem{r78} M. Fosgerau, M. \L{}ukawska, M. Paulsen, and T. K. Rasmussen, "Bikeability and the induced demand for cycling," \emph{Proceedings of the National Academy of Sciences}, vol. 120, no. 16, art. e2220515120, 2023, doi: 10.1073/pnas.2220515120.
+\bibitem{r79} P. Bons, A. Buatois, A. Ligthart, R. van den Hoed, and J. Warmerdam, "Final report -- Amsterdam Flexpower Operational Pilot," Interreg North Sea SEEV4-City, 2020.
+\bibitem{r80} H. Rohracher and P. Sp\"ath, "The Interplay of Urban Energy Policy and Socio-technical Transitions: The Eco-cities of Graz and Freiburg in Retrospect," \emph{Urban Studies}, vol. 51, no. 7, pp. 1415--1431, 2014, doi: 10.1177/0042098013500360.
+\bibitem{r81} Australian Energy Market Operator, "Initial Operation of the Hornsdale Power Reserve Battery Energy Storage System," Australian Energy Market Operator, Apr. 2018.
+\bibitem{r82} J. Swetina, G. Lu, P. Jacobs, F. Ennesser, and J. Song, "Toward a standardized common M2M service layer platform: Introduction to oneM2M," \emph{IEEE Wireless Communications}, vol. 21, no. 3, pp. 20--26, 2014, doi: 10.1109/MWC.2014.6845045.
+\bibitem{r83} L. Anthopoulos, M. Janssen, and V. Weerakkody, "A Unified Smart City Model (USCM) for smart city conceptualization and benchmarking," \emph{International Journal of Electronic Government Research}, vol. 12, no. 2, pp. 77--93, 2016, doi: 10.4018/IJEGR.2016040105.
+\bibitem{r84} T. Yigitcanlar, M. Kamruzzaman, L. Buys, G. Ioppolo, J. Sabatini-Marques, E. M. da Costa, and J. H. J. Yun, "Understanding smart cities: Intertwining development drivers with desired outcomes in a multidimensional framework," \emph{Cities}, vol. 81, pp. 145--160, 2018, doi: 10.1016/j.cities.2018.04.003.
+\bibitem{r85} S. E. Bibri and J. Krogstie, "Smart sustainable cities of the future: An extensive interdisciplinary literature review," \emph{Sustainable Cities and Society}, vol. 31, pp. 183--212, 2017, doi: 10.1016/j.scs.2017.02.016.
+\bibitem{r86} H. Bulkeley and V. Castan Broto, "Government by experiment? Global cities and the governing of climate change," \emph{Transactions of the Institute of British Geographers}, vol. 38, no. 3, pp. 361--375, 2013, doi: 10.1111/j.1475-5661.2012.00535.x.
+\bibitem{r87} L. Kong and O. Woods, "The ideological alignment of smart urbanism in Singapore: Critical reflections on a political paradox," \emph{Urban Studies}, vol. 55, no. 4, pp. 679--701, 2018, doi: 10.1177/0042098017746528.
+\bibitem{r88} H. March and R. Ribera-Fumaz, "Smart contradictions: The politics of making Barcelona a Self-sufficient city," \emph{European Urban and Regional Studies}, vol. 23, no. 4, pp. 816--830, 2016, doi: 10.1177/0969776414554488.
+\bibitem{r89} S. Khan, M. Shael, M. Majdalawieh, N. Nizamuddin, and M. Nicho, "Blockchain for Governments: The Case of the Dubai Government," \emph{Sustainability}, vol. 14, no. 11, art. 6576, 2022, doi: 10.3390/su14116576.
+\bibitem{r90} C. Rosenzweig, W. D. Solecki, R. Blake, M. Bowman, C. Faris, V. Gornitz, R. Horton, et al., "Developing coastal adaptation to climate change in the New York City infrastructure-shed: Process, approach, tools, and strategies," \emph{Climatic Change}, vol. 106, pp. 93--127, 2011, doi: 10.1007/s10584-010-0002-8.
+\bibitem{r91} A. Gharaibeh, M. A. Salahuddin, S. J. Hussini, A. Khreishah, I. Khalil, M. Guizani, and A. Al-Fuqaha, "Smart Cities: A Survey on Data Management, Security, and Enabling Technologies," \emph{IEEE Communications Surveys \& Tutorials}, vol. 19, no. 4, pp. 2456--2501, 2017, doi: 10.1109/COMST.2017.2736886.
+\bibitem{r92} L. Edwards, "Privacy, Security and Data Protection in Smart Cities: A Critical EU Law Perspective," \emph{European Data Protection Law Review}, vol. 2, no. 1, pp. 28--58, 2016, doi: 10.21552/EDPL/2016/1/6.
+\bibitem{r93} R. Kitchin, "Making sense of smart cities: Addressing present shortcomings," \emph{Cambridge Journal of Regions, Economy and Society}, vol. 8, no. 1, pp. 131--136, 2015, doi: 10.1093/cjres/rsu027.
+\bibitem{r94} G. Viale Pereira, P. Parycek, E. Falco, and R. Kleinhans, "Smart governance in the context of smart cities: A literature review," \emph{Information Polity}, vol. 23, no. 2, pp. 143--162, 2018, doi: 10.3233/IP-170067.
+\bibitem{r95} J. Sun, J. Yan, and K. Z. K. Zhang, "Blockchain-based sharing services: What blockchain technology can contribute to smart cities," \emph{Financial Innovation}, vol. 2, art. 26, 2016, doi: 10.1186/s40854-016-0040-y.
+\bibitem{r96} Z. Zheng, S. Xie, H. Dai, X. Chen, and H. Wang, "An overview of blockchain technology: Architecture, consensus, and future trends," in \emph{Proc. IEEE International Congress on Big Data}, pp. 557--564, 2017, doi: 10.1109/BigDataCongress.2017.85.
+\bibitem{r97} M. R. Palattella, M. Dohler, A. Grieco, G. Rizzo, J. Torsner, T. Engel, and L. Ladid, "Internet of Things in the 5G era: Enablers, architecture, and business models," \emph{IEEE Journal on Selected Areas in Communications}, vol. 34, no. 3, pp. 510--527, 2016, doi: 10.1109/JSAC.2016.2525418.
+\bibitem{r98} X. Fang, S. Misra, G. Xue, and D. Yang, "Smart grid - The new and improved power grid: A survey," \emph{IEEE Communications Surveys \& Tutorials}, vol. 14, no. 4, pp. 944--980, 2012, doi: 10.1109/SURV.2011.101911.00087.
+\bibitem{r99} Y. Lim, J. Edelenbos, and A. Gianoli, "Dynamics in the governance of smart cities: Insights from South Korean smart cities," \emph{International Journal of Urban Sciences}, vol. 27, no. 1, pp. 183--205, 2023, doi: 10.1080/12265934.2022.2063158.
+\bibitem{r100} R. H. Weber, "Internet of things: Privacy issues revisited," \emph{Computer Law and Security Review}, vol. 31, no. 5, pp. 618--627, 2015, doi: 10.1016/j.clsr.2015.07.002.
+\bibitem{r101} A. Caragliu and C. F. Del Bo, "Smart cities and the urban digital divide," \emph{npj Urban Sustainability}, vol. 3, art. 43, 2023, doi: 10.1038/s42949-023-00117-w.
+\bibitem{r102} Z. Chen and J. Cheng, "Economic Impact of Smart City Investment: Evidence from the Smart Columbus Projects," \emph{Journal of Planning Education and Research}, vol. 44, no. 3, pp. 1881--1897, 2024, doi: 10.1177/0739456X221129173.
+\bibitem{r103} N. Kalra and S. M. Paddock, "Driving to safety: How many miles of driving would it take to demonstrate autonomous vehicle reliability?," \emph{Transportation Research Part A: Policy and Practice}, vol. 94, pp. 182--193, 2016, doi: 10.1016/j.tra.2016.09.010.
+\bibitem{r104} O. Cats and G. Loutos, "Real-time bus arrival information system: An empirical evaluation," \emph{Journal of Intelligent Transportation Systems}, vol. 20, no. 2, pp. 138--151, 2016, doi: 10.1080/15472450.2015.1011638.
+\bibitem{r105} E. Fishman, S. Washington, and N. Haworth, "Bike share: A synthesis of the literature," \emph{Transport Reviews}, vol. 33, no. 2, pp. 148--165, 2013, doi: 10.1080/01441647.2013.775612.
+\bibitem{r106} P. Bellini, P. Nesi, and G. Pantaleo, "IoT-Enabled Smart Cities: A Review of Concepts, Frameworks and Key Technologies," \emph{Applied Sciences}, vol. 12, no. 3, art. 1607, 2022, doi: 10.3390/app12031607.
+\bibitem{r107} J. Shao and B. Min, "Sustainable development strategies for Smart Cities: Review and development framework," \emph{Cities}, vol. 158, art. 105663, 2025.
+\bibitem{r108} T. Singh, A. Solanki, S. K. Sharma, A. Nayyar, and A. Paul, "A Decade Review on Smart Cities: Paradigms, Challenges and Opportunities," \emph{IEEE Access}, vol. 10, pp. 68319--68364, 2022, doi: 10.1109/ACCESS.2022.3184710.
+\bibitem{r109} S. Bery and M. A. Haddad, "Walking the Talk: Why Cities Adopt Ambitious Climate Action Plans," \emph{Urban Affairs Review}, vol. 59, no. 5, pp. 1385--1407, 2023, doi: 10.1177/10780874221098951.
+\bibitem{r110} S. Shirowzhan, W. Tan, and S. M. E. Sepasgozar, "Digital Twin and CyberGIS for Improving Connectivity and Measuring the Impact of Infrastructure Construction Planning in Smart Cities," \emph{ISPRS International Journal of Geo-Information}, vol. 9, no. 4, art. 240, 2020, doi: 10.3390/ijgi9040240.
+\bibitem{r111} A. Sinaeepourfard, J. Garcia, X. Masip-Bruin, E. Marin-Tordera, J. Cirera, G. Grau, and F. Casaus, "Estimating Smart City sensors data generation: Current and future data in the city of Barcelona," in \emph{Proc. 2016 Mediterranean Ad Hoc Networking Workshop (Med-Hoc-Net)}, Vilanova i la Geltru, Spain, 2016, pp. 1--8, doi: 10.1109/MedHocNet.2016.7528424.
+\bibitem{r112} A. Alketbi, Q. Nasir, and M. Abu Talib, "Novel blockchain reference model for government services: Dubai government case study," \emph{International Journal of System Assurance Engineering and Management}, vol. 11, no. 6, pp. 1170--1191, 2020, doi: 10.1007/s13198-020-00971-2.
+\bibitem{r113} D. Finn, D. Chandrasekhar, and Y. Xiao, "A Region Recovers: Planning for Resilience after Superstorm Sandy," \emph{Journal of Planning Education and Research}, vol. 43, no. 1, pp. 136--149, 2023, doi: 10.1177/0739456X19864145.
+\bibitem{r114} G. N. Nabiyeva, S. M. Wheeler, J. K. London, and N. Brazil, "Implementation of Sustainable Development Goal 11 (Sustainable Cities and Communities): Initial Good Practices Data," \emph{Sustainability}, vol. 15, no. 20, art. 14810, 2023, doi: 10.3390/su152014810.
+\bibitem{r115} K. McCormick, S. Anderberg, L. Coenen, and L. Neij, "Advancing sustainable urban transformation," \emph{Journal of Cleaner Production}, vol. 50, pp. 1--11, 2013, doi: 10.1016/j.jclepro.2013.01.003.
+\bibitem{r116} A. Meijer and M. P. R. Bolivar, "Governing the smart city: A review of the literature on smart urban governance," \emph{International Review of Administrative Sciences}, vol. 82, no. 2, pp. 392--408, 2016, doi: 10.1177/0020852314564308.
+\bibitem{r117} A. Vanolo, "Smartmentality: The smart city as disciplinary strategy," \emph{Urban Studies}, vol. 51, no. 5, pp. 883--898, 2014, doi: 10.1177/0042098013494427.
+\bibitem{r118} A. Aylett, "Institutionalizing the urban governance of climate change adaptation: Results of an international survey," \emph{Urban Climate}, vol. 14, pp. 4--16, 2015, doi: 10.1016/j.uclim.2015.06.005.
+\bibitem{r119} K. C. Seto, B. G\"uneralp, and L. R. Hutyra, "Global forecasts of urban expansion to 2030 and direct impacts on biodiversity and carbon pools," \emph{Proceedings of the National Academy of Sciences}, vol. 109, no. 40, pp. 16083--16088, 2012, doi: 10.1073/pnas.1211658109.
+\bibitem{r120} M. Angelidou, "Smart city policies: A spatial approach," \emph{Cities}, vol. 41, pp. S3--S11, 2014, doi: 10.1016/j.cities.2014.06.007.
+\bibitem{r121} D. Prasad and T. Alizadeh, "What Makes Indian Cities Smart? A Policy Analysis of Smart Cities Mission," \emph{Telematics and Informatics}, vol. 55, art. 101466, 2020, doi: 10.1016/j.tele.2020.101466.
+\bibitem{r122} S. Praharaj, "Command and control governance in the 100 smart cities mission in India: Urban innovation or utopias?," \emph{Applied Geography}, vol. 184, art. 103766, 2025, doi: 10.1016/j.apgeog.2025.103766.
+\bibitem{r123} S. L. Hoe, "Defining a smart nation: The case of Singapore," \emph{Journal of Information, Communication and Ethics in Society}, vol. 14, no. 4, pp. 323--333, 2016, doi: 10.1108/JICES-02-2016-0005.
+
+\end{thebibliography}
+
+\end{document}
