@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2AF598,100:009EFD&height=300&section=header&text=Building%20the%20Cities%20of%20Tomorrow&fontSize=70&animation=fadeIn&fontAlignY=38&desc=Technology%2C%20Infrastructure%2C%20and%20Sustainability&descAlignY=55&descAlign=50" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2AF598,100:009EFD&height=300&section=header&text=Building%20the%20Cities%20of%20Tomorrow&fontSize=50&animation=fadeIn&fontAlignY=38&desc=Technology%2C%20Infrastructure%2C%20and%20Sustainability&descAlignY=55&descAlign=50" width="100%" />
 
 <!-- Badges -->
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
