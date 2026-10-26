@@ -158,10 +158,9 @@ The paper content is the intellectual property of the authors. The LaTeX templat
 | Author | Affiliation |
 |--------|-------------|
 | Jaishnu Sree Biradha | Vellore Institute of Technology, Chennai, India |
+| Derrick Richard | Vellore Institute of Technology, Chennai, India |
 | Suseela Sellamuthu | Vellore Institute of Technology, Chennai, India |
 | Bhavadharini R. M. | Vellore Institute of Technology, Chennai, India |
 | Krithiga R. | Vellore Institute of Technology, Chennai, India |
-| Derrick Richard | Vellore Institute of Technology, Chennai, India / University of the West of Scotland, London, UK |
-| Vedhapriyavadhana Rajamani | University of the West of Scotland, London, UK |
 
 *Corresponding author: Suseela Sellamuthu (suseela.s@vit.ac.in)*
