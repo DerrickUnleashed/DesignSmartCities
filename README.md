@@ -91,7 +91,7 @@ The compiled PDF is generated at `main.pdf` (53 pages, ~6 MB).
 ├── main.tex                   # Primary LaTeX source (Springer Nature sn-jnl)
 ├── sn-bibliography.bib        # BibTeX bibliography (120+ entries)
 ├── sn-jnl.cls                 # Springer Nature journal class file
-├── image-*.png                # Figures (16 images: architecture, 5G, mobility, etc.)
+├── figures/image-*.png        # Figures (16 images: architecture, 5G, mobility, etc.)
 ├── fig.eps / empty.eps        # Vector assets
 ├── revision_progress.md       # Internal revision tracking (ignored)
 ├── TODO.md                    # Task tracking (ignored)
