@@ -614,14 +614,14 @@ Smart AMI Metering & 15\% to 25\% billing gain & Eliminates under-registration a
 \end{tabularx}
 \end{table}
 
-In the sphere of waste management, urban areas have seen rapid growth in waste production: the World Bank's worldwide waste assessment estimates that municipal solid waste will increase from 2.01 billion tons annually in 2016 to 3.40 billion tons in 2050, which is a 70\% rise attributed to rapid urbanization and development. The use of ultrasonic sensors, fitted in waste collection bins, allows monitoring their fill status in real-time and facilitates route optimization for the collection vehicles. It has been demonstrated that the deployment of sensors leads to savings in unnecessary travel and, hence, 20\%-35\% reduction of costs associated with municipal waste collection and reduced diesel emissions \cite{r54,r57}. In water treatment plants, modern water treatment techniques include membrane filtration, ultraviolet (UV) treatment, and chemical dosing systems, which help keep drinking water quality high while reducing the cost of its treatment \cite{r55}.
+In the sphere of waste management, urban areas have seen rapid growth in waste production: the World Bank's worldwide waste assessment estimates that municipal solid waste will increase from 2.01 billion tons annually in 2016 to 3.40 billion tons in 2050, which is a 70\% rise attributed to rapid urbanization and development. The use of ultrasonic sensors, fitted in waste collection bins, allows monitoring their fill status in real-time and facilitates route optimization for the collection vehicles. It has been demonstrated that the deployment of sensors leads to savings in unnecessary travel and, hence, 20\%-35\% reduction of costs associated with municipal waste collection and reduced \text{CO}_2 emissions \cite{r54,r57}. In water treatment plants, modern water treatment techniques include membrane filtration, ultraviolet (UV) treatment, and chemical dosing systems, which help keep drinking water quality high while reducing the cost of its treatment \cite{r55}.
 
 Singapore has implemented a nationwide smart water network that utilizes over 300 acoustic sensors in real time and analytical tools on their distribution pipes. This country has achieved one of the lowest NRW percentages in the world (below 5\%), and it benefits from improved resource allocation \cite{r56}. In addition, Rome and Barcelona have both established smart waste networks where bin fill-level telemetry enables automated routing, leading to reduced municipal fuel costs and decreased carbon emissions \cite{r52,r57}.
 
 Deploying smart water and waste management solutions requires significant financial commitment to building necessary infrastructure. Privacy and cybersecurity issues associated with the data collected and analyzed by such solutions also need to be considered.
 
 \subsection{Urban Design and Planning}
-In this section, we analyze such planning aspects as mixed-use development (energy, transport, waste), green infrastructure (parks, corridors, urban forests), and sustainable urban development (renewable energy, rainwater, passive solar).
+This section analyzes such planning aspects as mixed-use development (energy, transport, waste), green infrastructure (parks, corridors, urban forests), and sustainable urban development (renewable energy, rainwater, passive solar).
 
 \begin{figure}[!ht]
 \centering
@@ -633,7 +633,7 @@ In this section, we analyze such planning aspects as mixed-use development (ener
 Introduction of intelligent technologies into urban planning assists in creating effective, sustainable, and comfortable cities. New digital opportunities allow cities to more effectively utilize their built environment, enhance the quality of life of its citizens, and address new urban issues. From a practical point of view, it implies the introduction of intelligent technologies into mixed-use development, green space planning, and sustainable urban development.
 
 \subsubsection{Mixed-Use Developments}
-This section will consider how various activities, such as residential, commercial, and recreational, are integrated with smart energy, transportation, and waste management systems, as shown in the cases of Marina Bay Sands (Singapore) and Hudson Yards (New York).
+This section discusses how various activities, such as residential, commercial, and recreational, are integrated with smart energy, transportation, and waste management systems, as shown in the cases of Marina Bay Sands (Singapore) and Hudson Yards (New York).
 
 Smart-integrated mixed-used developments involve the integration of activities that are residential, professional, commercial, and recreational in one single urban environment. Such integration facilitates easy access to the important facilities, minimizes the movement of people, and promotes sustainable living within the urban environment.
 
@@ -746,7 +746,7 @@ Limited case-specific analysis \\
 Mixed-use developments come with their own constraints such as land use conflicts, economic uncertainties, and the challenge of managing several uses in one development. Investing in smart technology and mixed-use development comes at a price and requires navigating the zoning regulations and process which may prove to be tedious for both developers and the municipality.
 
 \subsubsection{Green Infrastructure and Sustainable Urban Development}
-This section will focus on green corridors, parks and urban forests for temperature and storm water management, as well as on renewable energy resources, rainwater harvesting, passive solar building design and green construction principles.
+This section focuses on green corridors, parks and urban forests for temperature and storm water management, as well as on renewable energy resources, rainwater harvesting, passive solar building design and green construction principles.
 
 Green spaces play a crucial role in sustainable urban design. Green spaces provide a livable environment and increase the environmental quality of urban areas, reducing the pollution levels, managing temperature, and increasing the biodiversity in rapidly growing urban areas. Incorporation of green corridors, parks, and urban forests has not only health and ecologic impacts but it allows for creating smart and sustainable cities using their natural resources in an efficient way and preserving natural environments, reducing air pollution, urban heat island effect, and providing residents with leisure space. Research confirms that green areas can help regulate urban temperature and reduce storm water runoff \cite{r63}. This approach also emphasizes the importance of renewable energy resources, waste recycling and green building, applying such concepts as rainwater harvesting and passive solar building design among others.
 
@@ -771,7 +771,13 @@ Green spaces play a crucial role in sustainable urban design. Green spaces provi
     ymin=0,
     ymax=125,
     xtick={2018,2019,2020,2021,2022,2023,2024,2025,2026,2027,2028,2029},
-    xticklabel style={rotate=45, anchor=east},
+    xticklabel style={
+        rotate=45,
+        anchor=east,
+        /pgf/number format/fixed,
+        /pgf/number format/1000 sep={}
+    },
+    scaled x ticks=false,
     ytick={0,20,40,60,80,100,120},
     grid=major,
     grid style={dashed,gray!30},
@@ -817,7 +823,7 @@ Green spaces play a crucial role in sustainable urban design. Green spaces provi
 
 Buildings and the wider built environment account for roughly 30\% of global final energy consumption and over a quarter of global energy-sector $\text{CO}_2$ emissions. This makes passive solar architecture, biophilic urban design, and energy-efficient retrofitting critical tools for reducing a city's climate impact \cite{r64,r125}. Green spaces also bring significant health benefits, since they support psychological well-being, ease stress, and encourage regular physical activity. Research has also linked access to such environments with fewer symptoms of anxiety and depression \cite{r65}.
 
-The High Line, which is an elevated linear park constructed on top of a former industrial tract in New York, demonstrates the way green infrastructure can enhance the aesthetics of the city, create recreational areas, and stimulate economic development \cite{r66}. The Vauban suburb in Freiburg, Germany, integrates all the above elements into one single sustainable suburb \cite{r67}. The long-term success of such projects depends on developing green spaces and environmentally friendly buildings capable of withstanding both regional climate conditions and the broader pressures of global warming. Table~\ref{tab:mixed} and Figure~\ref{fig:smartcityrevenue} together illustrate the economic and environmental influence of these policies.
+The High Line, which is an elevated linear park constructed on top of a former industrial tract in New York, demonstrates the way green infrastructure can enhance the aesthetics of the city, create recreational areas, and stimulate economic development \cite{r66}. The Vauban suburb in Freiburg, Germany, integrates all the above elements into one single sustainable suburb \cite{r67}. The long-term success of such projects depends on developing green spaces and environmentally friendly buildings capable of withstanding both regional climate conditions and the broader pressures of global warming. Figure~\ref{fig:smartcityrevenue} together illustrate the economic and environmental influence of these policies.
 
 \section{Technological Innovation in Smart Urban Environments}
 \noindent This part looks at IoT, Big Data Analytics, AI, blockchain, smart mobility, smart governance, and smart energy systems as the core technological innovations reshaping urban life.
